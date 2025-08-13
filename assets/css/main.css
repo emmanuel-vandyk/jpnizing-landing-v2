@@ -1,42 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 @import "@nuxt/ui";
 
 :root {
   --ui-container: var(--container-8xl);
   --ui-radius: 0.375rem;
+  --sans-serif: var(--sans-serif);
+  --text-base: #060606;
 }
 
+
 @theme {
-  --sans-serif: "Bebas Neue, sans-serif";
   /* Contenedores personalizados */
   --container-8xl: 90rem;
 
-  /* Colores personalizados si necesitas */
-  --color-brand-50: #eff6ff;
-  --color-brand-100: #dbeafe;
-  --color-brand-200: #bfdbfe;
-  --color-brand-300: #93c5fd;
-  --color-brand-400: #60a5fa;
-  --color-brand-500: #3b82f6;
-  --color-brand-600: #2563eb;
-  --color-brand-700: #1d4ed8;
-  --color-brand-800: #1e40af;
-  --color-brand-900: #1e3a8a;
-  --color-brand-950: #172554;
-  --bg-primary-landing: #f19fca;
+  /* Background colors personalizados  */
+
+  --bg-primary-landing: #f6f6f6;
   --bg-secondary-landing: #f8fafc;
-  --text-base: #f6f6f6;
+
+  /* Text colors */
+  --color-tertiary: #060606;
 }
 
 body {
   background-color: var(--bg-primary-landing);
   color: var(--text-base);
-  font-family: var(--sans-serif);
-}
-
-@font-face {
-  font-family: "Bebas Neue, sans-serif";
-  src: url("~/fonts/BebasNeue-Regular.ttf") format("ttf");
-  font-weight: normal;
-  font-style: normal;
 }

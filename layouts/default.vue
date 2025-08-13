@@ -1,26 +1,24 @@
 <template>
-  <main
-    class="min-h-screen flex flex-col bg-center bg-cover h-full w-full justify-center font-sans"
-    :style="backgroundStyles"
-  >
-    <div>
-      <AppHeader />
-    </div>
-    <div class="flex-1">
-      <slot />
-    </div>
-    <AppFooter />
-  </main>
+  <div class="flex flex-col min-h-screen w-full">
+    <header>
+      <slot name="header">
+        <AppHeader />
+      </slot>
+    </header>
+    <main
+      class="flex flex-col h-min-screen w-full font-sans pt-20"
+    >
+      <slot name="default">
+        <NuxtPage />
+      </slot>
+    </main>
+    <footer class="flex flex-col w-full h-20">
+        <slot name="footer">
+      <AppFooter />
+      </slot>
+    </footer>
+  </div>
 </template>
 <script setup lang="ts">
-const img = useImage();
 
-const backgroundStyles = computed(() => {
-  const url = img("/images/background-image.jpg", {
-    width: 1200,
-    quality: 90,
-    format: "webp",
-  });
-  return { backgroundImage: `url(${url})` };
-});
 </script>

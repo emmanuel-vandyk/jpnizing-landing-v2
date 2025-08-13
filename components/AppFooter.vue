@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from "@nuxt/ui";
+import type { NavigationMenuItem } from '@nuxt/ui';
 
 const items: NavigationMenuItem[] = [
   {
-    label: "Powered by CoursePro / Desarrollado por CoursePro",
+    label: "Powered by CoursePro / Desarrollado por CoursePro ❤️",
+
     to: "https://www.coursepro.app",
     target: "_blank",
   },
@@ -11,10 +12,14 @@ const items: NavigationMenuItem[] = [
 </script>
 
 <template>
-  <div class="py-4">
-    <UNavigationMenu :items="items" variant="link" />
-    <p class="text-white text-sm px-2.5">
+   <div class="flex flex-col items-end bg-white py-3 text-right">
+       <UNavigationMenu
+      :items="items"
+      variant="pill"
+      highlight-color="primary"
+    />
+    <p class="font-semibold text-sm px-2.5">
       Copyright © {{ new Date().getFullYear() }}
     </p>
-  </div>
+   </div>
 </template>

@@ -1,81 +1,78 @@
 export default defineAppConfig({
   ui: {
     colors: {
-      primary: "#007bff",
-      secondary: "#6c757d",
-      white: "#f6f6f6",
-      success: "#28a745",
-      danger: "#dc3545",
-      warning: "#ffc107",
-      info: "#17a2b8",
-      light: "#f8f9fa",
-      dark: "#343a40",
+      amber: 'amber'
+    },
+    button: {
+      variants: {
+        color: {
+          base: "bg-none",
+          tertiary: "bg-fuchsia"
+        },
+      },
     },
     card: {
       slots: {
-        root: "rounded-lg overflow-hidden w-lg",
-        header: "p-4 sm:px-6",
-        body: "p-4 sm:p-6",
-        footer: "p-4 sm:px-6",
+        root: "rounded-xl overflow-hidden",
+        header: "p-4",
+        body: "p-4",
+        footer: "p-4",
       },
       variants: {
         variant: {
-          solid: {
-            root: "bg-inverted text-inverted",
+          olid: {
+            root: "bg-white/10 backdrop-blur-sm border border-white/20",
           },
           outline: {
-            root: "bg-white ring ring-default divide-y divide-default",
+            root: "bg-white/5 backdrop-blur-sm border border-white/20",
           },
           soft: {
-            root: "bg-elevated/50 divide-y divide-default",
+            root: "bg-white/5 backdrop-blur-sm",
           },
           subtle: {
-            root: "bg-elevated/50 ring ring-default divide-y divide-default",
+            root: "bg-white/10 backdrop-blur-sm border border-white/20",
           },
         },
       },
       defaultVariants: {
-        variant: "outline",
+        variant: "soft",
       },
     },
     container: {
       base: "w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 rounded-lg ",
     },
-
+    header: {
+      base: "bg-gradient from-rose-400 via-orange-400 to-yellow-300"
+    },
+    footer: {
+      base: "relative bottom-0 mt-auto flex items-baseline justify-around h-20 gap-8 w-full",
+    },
     navigationMenu: {
       slots: {
-        root: "overflow-hidden w-lg",
+        root: 'text-black',
+        list: 'flex gap-3',
+        linkLeadingIcon: 'bg-black',
+        link: 'text-lg'
       },
       variants: {
-        highlight: {
+        active: {
           true: {
-            indicator: "bg-white",
+            link: 'bg-rose-400 rounded-md',
+            linkLeadingIcon: 'bg-white',
           },
+          false: {
+            link: 'text-black',
+          }
         },
       },
-      variant: {
-        solid: {
-          root: "bg-inverted text-inverted",
-        },
-        outline: {
-          root: "bg-white ring ring-default divide-y divide-default",
-        },
-        soft: {
-          root: "bg-elevated/50 divide-y divide-default",
-        },
-        subtle: {
-          root: "bg-elevated/50 ring ring-default divide-y divide-default",
-        },
-        transparent: {
-          root: "bg-transparent",
-        },
-      },
+      compoundVariants: [
+        { 
+          color: 'primary'
+        }
+      ],
+      defaultVariants: {
+        variant: 'pill'
+      }
     },
-    defaultVariants: {
-      variant: "pill",
-    },
-  },
-  footer: {
-    base: "flex items-baseline justify-around h-20 gap-8 w-full",
   },
 });

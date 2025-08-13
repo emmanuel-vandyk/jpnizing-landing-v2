@@ -1,7 +1,9 @@
 <template>
   <UApp>
     <NuxtLayout>
-      <NuxtPage />
+      <slot name="default">
+        <NuxtPage />
+      </slot>
     </NuxtLayout>
   </UApp>
 </template>
