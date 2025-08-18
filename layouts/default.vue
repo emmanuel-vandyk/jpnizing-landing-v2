@@ -6,7 +6,7 @@
       </slot>
     </header>
     <main
-      class="flex flex-col h-min-screen w-full font-sans pt-20"
+      class="flex flex-col h-min-screen w-full font-sans"
     >
       <slot name="default">
         <NuxtPage />

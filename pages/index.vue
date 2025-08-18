@@ -1,11 +1,11 @@
 <template>
-  <div class="min-h-screen">
+  <div class="bg-brand-primary-50 min-h-screen">
     <div class="bg-center bg-cover w-full justify-center min-h-screen">
       <LazyHero />
     </div>
     <div class="bg-center bg-cover h-full w-full justify-center">
       <div
-    class="bg-gradient-to-br from-rose-500 via-orange-400 to-yellow-300 min-h-screen"
+    class="bg-brand-background min-h-screen"
   >
     <!-- Hero CTA Section -->
     <div>
@@ -13,7 +13,7 @@
     </div>
 
     <!-- Talleres Section -->
-    <div class="bg-cyan-700">
+    <div>
       <LazyWorkshopsSection />
     </div>
 
@@ -24,7 +24,7 @@
 
     <!-- Teacher Section -->
     <div>
-      <LazyTeachersSection />
+      <LazySenseiSection />
     </div>
     <!-- CTA Section -->
      <div>

@@ -5,7 +5,7 @@
       alt="Logo" 
       format="webp"
       quality="100"
-      placeholder="blur"
+      hydrate-on-visible  
     />
   </div>
 </template>

@@ -1,29 +1,100 @@
-@import url('https://fonts.googleapis.com/css2?family=family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 @import "@nuxt/ui";
 
+/* Dark theme variables */
+.dark {
+  --ui-bg: var(--ui-color-contrast-500);
+  --ui-text: #fff7f3;
+  --ui-primary: var(--ui-color-primary-300);
+  --ui-secondary: var(--ui-color-secondary-300);
+  --ui-tertiary: var(--ui-color-tertiary-300);
+  --ui-neutral: var(--ui-color-neutral-900);
+  --ui-accent: var(--ui-color-accent-500);
+  --ui-contrast: var(--ui-color-contrast-500);
+
+  --ui-tertiary: var(--ui-tertiary);
+  --ui-neutral: var(--ui-neutral);
+  --ui-accent: var(--ui-accent);
+  --ui-contrast: var(--ui-contrast);
+}
+
+/* Color palette variables */
 :root {
-  --ui-container: var(--container-8xl);
-  --ui-radius: 0.375rem;
-  --sans-serif: var(--sans-serif);
-  --text-base: #060606;
+  --ui-font-sans: 'Manrope', sans-serif;
+  --ui-color-base: #060606;
+
+  --ui-color-primary-50: #ffd2d2;
+  --ui-color-primary-100: #ffa3a3;
+  --ui-color-primary-200: #fc0605;
+  --ui-color-primary-300: #dc0404;
+  --ui-color-primary-400: #c00303;
+  --ui-color-primary-500: #a00202;
+  --ui-color-primary-600: #820101;
+  --ui-color-primary-700: #680101;
+  --ui-color-primary-800: #4c0000;
+  --ui-color-primary-900: #350000;
+  --ui-color-primary-950: #210000;
+
+  --ui-color-secondary-50: #fff0f6;
+  --ui-color-secondary-100: #ffe0ed;
+  --ui-color-secondary-200: #ffbcda;
+  --ui-color-secondary-300: #ff90c6;
+  --ui-color-secondary-400: #ff51b3;
+  --ui-color-secondary-500: #eb009c;
+  --ui-color-secondary-600: #be007d;
+  --ui-color-secondary-700: #8f005d;
+  --ui-color-secondary-800: #670041;
+  --ui-color-secondary-900: #3d0025;
+  --ui-color-secondary-950: #2a0018;
+
+  --ui-color-tertiary-50: #fff0f3;
+  --ui-color-tertiary-100: #ffe1e6;
+  --ui-color-tertiary-200: #ffc5d1;
+  --ui-color-tertiary-300: #ffa5b8;
+  --ui-color-tertiary-400: #ff85a3;
+  --ui-color-tertiary-500: #ff3c7e;
+  --ui-color-tertiary-600: #db0062;
+  --ui-color-tertiary-700: #a50048;
+  --ui-color-tertiary-800: #720030;
+  --ui-color-tertiary-900: #47001b;
+  --ui-color-tertiary-950: #300010;
+
+  --ui-color-neutral-50: #f9eef0;
+  --ui-color-neutral-100: #f4dde1;
+  --ui-color-neutral-200: #e9bac4;
+  --ui-color-neutral-300: #e197a7;
+  --ui-color-neutral-400: #d96f8a;
+  --ui-color-neutral-500: #c44f70;
+  --ui-color-neutral-600: #9d3e58;
+  --ui-color-neutral-700: #772d42;
+  --ui-color-neutral-800: #541e2d;
+  --ui-color-neutral-900: #330f19;
+  --ui-color-neutral-950: #23080f;
+
+  --ui-color-accent-500: #ba8376; /* mapped from --brand-accent-light */
+  --ui-color-contrast-500: #281713;   /* mapped from --brand-contrast-dark */
+  --ui-color-bg: #fff7f3;          /* mapped from --brand-background */
+
+  /* Main UI variables */
+  --ui-primary: var(--ui-color-primary-200);
+  --ui-secondary: var(--ui-color-secondary-500);
+  --ui-tertiary: var(--ui-color-tertiary-500);
+  --ui-neutral: var(--ui-color-neutral-500);
+  --ui-accent: var(--ui-color-accent-500);
+  --ui-contrast: var(--ui-color-contrast-500);
+
+  --ui-success: var(--ui-tertiary);
+  --ui-info: var(--ui-neutral);
+  --ui-warning: var(--ui-accent);
+  --ui-error: var(--ui-contrast);
+
+  --ui-bg: var(--ui-color-bg);
+  --ui-text: var(--ui-color-base);
+
 }
 
-
-@theme {
-  /* Contenedores personalizados */
-  --container-8xl: 90rem;
-
-  /* Background colors personalizados  */
-
-  --bg-primary-landing: #f6f6f6;
-  --bg-secondary-landing: #f8fafc;
-
-  /* Text colors */
-  --color-tertiary: #060606;
-}
-
+/* Apply variables */
 body {
-  background-color: var(--bg-primary-landing);
-  color: var(--text-base);
+  background-color: var(--ui-color-bg); 
+  color: var(--ui-text);
 }

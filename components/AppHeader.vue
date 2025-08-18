@@ -1,10 +1,15 @@
 <template>
-  <div class="flex items-center justify-center w-full font-sans bg-white fixed z-50">
-    <UNavigationMenu
-      :items="items"
-      color="neutral"
-      class="data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-80 flex justify-between items-center py-3 px-8"
-    />
+  <div 
+  :class="[
+    'header',
+    isScrolled ? 'bg-[color:var(--ui-contrast)] transition-colors duration-300 ease-in-out sticky-header shadow-md' : 'bg-transparent duration-300'  
+  ]" 
+    class="flex items-center justify-center w-full font-sans fixed z-50">
+      <UNavigationMenu
+        :items="items"
+        :color="isScrolled ? 'onDark' : 'neutral'"
+        class="data-[orientation=horizontal]:w-full h-full flex justify-between items-center px-8 pb-2"
+      />
   </div>
 </template>
 
@@ -37,4 +42,44 @@ const items = ref<NavigationMenuItem[][]>([
     },
   ],
 ]);
+
+const isScrolled = ref(false);
+
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > 50;
+}
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", handleScroll);
+})
 </script>
+
+<style lang="css">
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 28px 0;
+  border-bottom: 0;
+  z-index: 999;
+}
+
+.sticky-header {
+  padding: 28px 0;
+  border-top-color: transparent;
+}
+
+@media screen and (max-width:767px) {
+    .header {
+        padding: 15px 0;
+    }
+
+    .sticky-header {
+        padding: 8px 0;
+    }
+}
+</style>

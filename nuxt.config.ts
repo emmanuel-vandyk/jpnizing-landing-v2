@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["@/assets/css/main.css"],
 
-  modules: ["@nuxt/content", "@nuxt/eslint", "@nuxt/image", "@nuxt/ui"],
+  modules: ["@nuxt/content", "@nuxt/eslint", "@nuxt/image", "@nuxt/ui", "nuxt-aos"],
   pages: true,
 
   app: {
@@ -34,7 +34,7 @@ export default defineNuxtConfig({
         'warning',
         'info',
         'error',
-        'amber'
+        'amber',
       ]
     }
   }
