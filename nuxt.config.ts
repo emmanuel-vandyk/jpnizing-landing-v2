@@ -3,6 +3,13 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["@/assets/css/main.css"],
 
+  icon: {
+    customCollections: [{
+      prefix: 'custom',
+      dir: '/assets/icons'
+    }]
+  },
+
   modules: ["@nuxt/content", "@nuxt/eslint", "@nuxt/image", "@nuxt/ui", "nuxt-aos"],
   pages: true,
 
@@ -35,6 +42,7 @@ export default defineNuxtConfig({
         'info',
         'error',
         'amber',
+        'onDark'
       ]
     }
   }

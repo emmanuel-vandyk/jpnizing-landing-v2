@@ -2,16 +2,19 @@
     <div 
       class="min-h-screen py-16 w-full"
     >
-      <UContainer id="podcast" class="flex flex-col items-center justify-center w-full">
+      <UContainer id="podcast" class="flex flex-col items-center justify-center w-full py-12">
         <div 
-          class="text-center mb-12"
-          data-aos="fade-down-right"
+          class="text-center mb-12 p-4"
+          data-aos="fade-up"
         >
-          <h2 class="text-5xl font-bold mb-6">Podcast en Japonés</h2>
-          <p class="text-xl max-w-2xl mx-auto">
-            Mejora tu comprensión auditiva con nuestro podcast semanal. Historias,
-            entrevistas y lecciones en japonés real.
-          </p>
+          <div 
+        >
+            <h2 class="text-5xl font-bold mb-6 py-4">Podcast en Japonés</h2>
+            <p class="text-xl max-w-2xl mx-auto pb-4">
+              Mejora tu comprensión auditiva con nuestro podcast semanal. Historias,
+              entrevistas y lecciones en japonés real.
+            </p>
+          </div>
         </div>
         <UCard 
           variant="solid" 
@@ -25,7 +28,7 @@
               src="/images/podcast.png" 
               alt="Podcast en Japonés" 
               format="webp" placeholder="blur" 
-              class="bg-cover w-lg   h-full rounded-t-xl" 
+              class="bg-cover w-lg h-full rounded-t-xl" 
              />
           </template>
           <template #footer>

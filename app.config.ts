@@ -67,21 +67,40 @@ export default defineAppConfig({
     button: {
       variants: {
         color: {
-          base: "bg-primary",
+          base: "bg-primary text-white",
+        },
+        variant: {
+
+          solid: "bg-primary"
         },
       },
+      compoundVariants: [
+        {
+          color: "primary",
+          variant: "solid",
+          class: {
+            base: "text-white",
+            trailingIcon: "text-white",
+            leadingIcon: "text-white"
+          },
+        },
+        {
+          color: "neutral",
+          variant: "solid",
+          class: "text-black"
+        }
+      ],
     },
     navigationMenu: {
       slots: {
-        root: 'text-black',
         list: 'flex gap-3',
-        link: 'text-lg'
+        link: 'text-lg before:rounded-full'
       },
       variants: {
         active: {
           true: {
-            link: 'bg-primary-200 rounded-md',
-            linkLeadingIcon: '',
+            link: 'bg-primary-100 rounded-full before:text-default',
+            
           },
           false: {
           }
@@ -92,14 +111,33 @@ export default defineAppConfig({
             linkLeadingIcon: 'text-black'
           },
           onDark: {
-            link: 'bg-accent text-white',
+            link: 'bg-accent text-white hover:text-black hover:bg-default rounded-full',
             linkLeadingIcon: 'text-white'
           }
         }
       },
       compoundVariants: [
         {
-          color: 'primary'
+          color: "primary",
+          variant: "pill",
+          class: {
+            link: [
+              'text-white hover:text-black transition-colors'
+            ]
+          }
+        },
+        {
+          color: "onDark",
+          variant: "pill",
+          class: {
+            link: [
+              'text-white hover:text-black transition-colors'
+            ],
+            linkLeadingIcon: [
+              'text-white group-hover:text-black',
+              'transition-colors'
+            ]
+          }
         }
       ],
       defaultVariants: {

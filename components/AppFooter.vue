@@ -12,7 +12,7 @@ const items: NavigationMenuItem[] = [
 </script>
 
 <template>
-   <div class="flex flex-col items-end py-3 text-right bg-[color:var(--ui-contrast)]">
+   <div class="flex flex-col items-center lg:items-end py-3 text-right bg-[color:var(--ui-contrast)]">
        <UNavigationMenu
       :items="items"
       variant="pill"

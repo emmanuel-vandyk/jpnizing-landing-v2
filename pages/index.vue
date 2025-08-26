@@ -1,36 +1,22 @@
 <template>
-  <div class="bg-brand-primary-50 min-h-screen">
+  <div class="bg-default min-h-screen w-full">
     <div class="bg-center bg-cover w-full justify-center min-h-screen">
       <LazyHero />
     </div>
     <div class="bg-center bg-cover h-full w-full justify-center">
       <div
-    class="bg-brand-background min-h-screen"
-  >
-    <!-- Hero CTA Section -->
-    <div>
-      <LazyHeroCTASection />
-    </div>
-
-    <!-- Talleres Section -->
-    <div>
-      <LazyWorkshopsSection />
-    </div>
-
-    <!-- Podcast Section -->
-    <div>
-       <LazyPodcastSection />
-    </div>
-
-    <!-- Teacher Section -->
-    <div>
-      <LazySenseiSection />
-    </div>
-    <!-- CTA Section -->
-     <div>
-        <CTASection />
-     </div>
-    </div>
+        class="relative bg-brand-background halftone-bg bg-contain bg-repeat-round min-h-screen bg-center mask-t-from-95%">
+        <div class="flex flex-col">
+          <!-- Talleres Section -->
+          <LazyWorkshopsSection />
+          <!-- Podcast Section -->
+          <LazyPodcastSection />
+          <!-- Sensei Section -->
+          <LazySenseiSection />
+          <!-- CTA Section -->
+          <CTASection />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -41,3 +27,15 @@ definePageMeta({
   layout: "default",
 });
 </script>
+<style scoped>
+.halftone-bg {
+  background-image: radial-gradient(
+    circle at center,
+    #ede8d0 0.25rem,
+    transparent 0
+  ), radial-gradient(circle at center, #efe8d9 0.25rem, transparent 0);
+  background-size: 1.4rem 1.4rem;
+  background-position: 0 0, 0.65rem 0.65rem;
+  background-clip: content-box;
+}
+</style>

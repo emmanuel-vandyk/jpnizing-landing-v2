@@ -20,12 +20,12 @@
 
 /* Color palette variables */
 :root {
-  --ui-font-sans: 'Manrope', sans-serif;
+  --ui-font-sans: 'Bangers', system-ui;
   --ui-color-base: #060606;
 
-  --ui-color-primary-50: #ffd2d2;
-  --ui-color-primary-100: #ffa3a3;
-  --ui-color-primary-200: #fc0605;
+  --ui-color-primary-50: #ffb3b3;
+  --ui-color-primary-100: #ff8080;
+  --ui-color-primary-200: #ff4d4d;
   --ui-color-primary-300: #dc0404;
   --ui-color-primary-400: #c00303;
   --ui-color-primary-500: #a00202;
@@ -47,17 +47,8 @@
   --ui-color-secondary-900: #3d0025;
   --ui-color-secondary-950: #2a0018;
 
-  --ui-color-tertiary-50: #fff0f3;
-  --ui-color-tertiary-100: #ffe1e6;
-  --ui-color-tertiary-200: #ffc5d1;
-  --ui-color-tertiary-300: #ffa5b8;
-  --ui-color-tertiary-400: #ff85a3;
-  --ui-color-tertiary-500: #ff3c7e;
-  --ui-color-tertiary-600: #db0062;
-  --ui-color-tertiary-700: #a50048;
-  --ui-color-tertiary-800: #720030;
-  --ui-color-tertiary-900: #47001b;
-  --ui-color-tertiary-950: #300010;
+  --ui-color-tertiary: #ede8d0;
+  
 
   --ui-color-neutral-50: #f9eef0;
   --ui-color-neutral-100: #f4dde1;
@@ -97,4 +88,8 @@
 body {
   background-color: var(--ui-color-bg); 
   color: var(--ui-text);
+}
+
+h1, h2 {
+  font-style: italic;
 }
