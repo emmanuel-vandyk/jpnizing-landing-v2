@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col min-h-screen w-full">
+  <div class="flex flex-col min-h-screen">
     <header>
       <slot name="header">
         <AppHeader />
@@ -12,7 +12,7 @@
         <NuxtPage />
       </slot>
     </main>
-    <footer class="flex flex-col w-full h-20">
+    <footer class="flex flex-col w-full h-24">
         <slot name="footer">
       <AppFooter />
       </slot>

@@ -70,50 +70,49 @@ export default defineAppConfig({
           base: "bg-primary text-white",
         },
         variant: {
-
-          solid: "bg-primary"
+          solid: "bg-primary",
         },
+        size: {
+          lg: "gap-3",
+        }
       },
       compoundVariants: [
         {
           color: "primary",
           variant: "solid",
           class: {
-            base: "text-white",
+            base: "text-white px-8 py-4 hover:outline font-serif",
             trailingIcon: "text-white",
-            leadingIcon: "text-white"
+            leadingIcon: "text-white size-7"
           },
         },
         {
           color: "neutral",
           variant: "solid",
-          class: "text-black"
+          class: {
+            base: "bg-gray-200 hover:outline hover:shadow-2xl text-black px-8 py-4 font-serif",
+            leadingIcon: "size-7"
+          },
         }
       ],
     },
     navigationMenu: {
       slots: {
         list: 'flex gap-3',
-        link: 'text-lg before:rounded-full'
+        link: 'text-xl font-semibold before:rounded-full'
       },
       variants: {
         active: {
           true: {
-            link: 'bg-primary-100 rounded-full before:text-default',
+            link: 'bg-primary rounded-full before:text-default',
             
           },
-          false: {
-          }
         },
         color: {
           neutral: {
-            link: 'text-black',
+            link: 'text-black leading-10.5',
             linkLeadingIcon: 'text-black'
           },
-          onDark: {
-            link: 'bg-accent text-white hover:text-black hover:bg-default rounded-full',
-            linkLeadingIcon: 'text-white'
-          }
         }
       },
       compoundVariants: [
@@ -125,16 +124,16 @@ export default defineAppConfig({
               'text-white hover:text-black transition-colors'
             ]
           }
-        },
+        },  
         {
           color: "onDark",
           variant: "pill",
           class: {
             link: [
-              'text-white hover:text-black transition-colors'
+              'text-black hover:text-black transition-colors'
             ],
             linkLeadingIcon: [
-              'text-white group-hover:text-black',
+              'text-black group-hover:text-black',
               'transition-colors'
             ]
           }
@@ -142,7 +141,7 @@ export default defineAppConfig({
       ],
       defaultVariants: {
         variant: 'pill',
-        color: 'neutral'
+        color: 'neutral',
       }
     },
     carousel: {

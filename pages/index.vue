@@ -1,6 +1,6 @@
 <template>
   <div class="bg-default min-h-screen w-full">
-    <div class="bg-center bg-cover w-full justify-center min-h-screen">
+    <div class="bg-center bg-cover w-full justify-center">
       <LazyHero />
     </div>
     <div class="bg-center bg-cover h-full w-full justify-center">

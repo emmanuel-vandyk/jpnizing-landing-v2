@@ -10,7 +10,7 @@
           <div 
         >
             <h2 class="text-5xl font-bold mb-6 py-4">Podcast en Japonés</h2>
-            <p class="text-xl max-w-2xl mx-auto pb-4">
+            <p class="text-xl max-w-2xl mx-auto pb-4 font-serif font-light">
               Mejora tu comprensión auditiva con nuestro podcast semanal. Historias,
               entrevistas y lecciones en japonés real.
             </p>
@@ -27,13 +27,13 @@
             <LazyNuxtImg 
               src="/images/podcast.png" 
               alt="Podcast en Japonés" 
-              format="webp" placeholder="blur" 
+              format="webp"
               class="bg-cover w-lg h-full rounded-t-xl" 
              />
           </template>
           <template #footer>
             <div class="h-16">
-              <p class="text-xl font-bold -mt-8">Podcast en Japonés</p>
+              <p class="text-2xl font-bold -mt-8">Podcast en Japonés</p>
             </div>
           </template>
         </UCard>

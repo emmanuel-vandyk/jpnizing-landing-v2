@@ -1,14 +1,18 @@
 <template>
-    <div class="border-2 border-black bg-white p-4 shadow-lg text-black text-lg font-bold uppercase leading-tight tracking-wider w-full h-fit lg:max-w-xs font-[Mangat]">
-        <span class="text-xs">{{ text }}</span>
+<div
+      class="font-comic aspect-video max-w-sm lg:w-56 bg-white border-4 border-black rounded-xl shadow-lg text-center p-3 z-10 text-xs lg:text-2xl" :class="item.class"
+      >
+        <p>{{ item.name }}</p>
+        <p>{{ item.japaneseName }}</p>
+        <p>Nivel: {{ item.japaneseLevel }}</p>
     </div>
 </template>
 
-<script setup>
+<script setup generic="T">
 defineProps({
-    text: {
+    item: {
         type: String,
-        default: ''
+        required: true
     }
 })
 </script>

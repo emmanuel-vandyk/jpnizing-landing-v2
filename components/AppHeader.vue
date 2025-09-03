@@ -1,45 +1,87 @@
 <template>
   <div 
-  :class="[
-    'header',
-    isScrolled ? 'bg-[color:var(--ui-contrast)] transition-colors duration-300 ease-in-out sticky-header shadow-md' : 'bg-transparent duration-300'  
-  ]" 
-    class="flex items-center justify-center w-full font-sans fixed z-50">
-      <UNavigationMenu
-        :items="items"
-        :color="isScrolled ? 'onDark' : 'neutral'"
-        class="data-[orientation=horizontal]:w-full h-full flex justify-between items-center px-8 pb-2"
-      />
+    :class="[
+      'header',
+      isScrolled ? 'bg-default/50 transition-colors duration-300 ease-in-out sticky-header shadow-sm backdrop-blur-md' : 'bg-transparent duration-300'  
+    ]" 
+    class="flex items-center justify-around font-serif font-extralight tracking-wide uppercase z-50 pb-2 mx-auto">
+
+      <!-- Sección Izquierda: Logo como un ULink con una imagen -->
+      <ULink 
+        to="/" 
+        :class="[
+          'md:flex transition-all ease-in-out duration-300',
+          isScrolled ? 'visible opacity-100' : 'invisible opacity-0 pointer-events-none']">
+        <NuxtImg src="/images/japanizing-logo.png" alt="Logo de Japonizando América" class="h-12 md:h-16 lg:h-32 w-auto" />
+      </ULink>
+      <!-- Sección Central: Menú de Navegación -->
+      <div class="hidden md:block">
+        <UNavigationMenu
+          :items="items"
+          color="neutral"
+        />
+      </div>
+
+      <!-- Sección Derecha: Botón de Ingresar -->
+      <UButton
+        icon="i-heroicons-arrow-right-on-rectangle"
+        to="https://cursos.japonizandoamerica.com/login/index.php"
+        size="xl"
+        variant="solid"
+        color="neutral"
+        class="border gap-2 rounded-full text-lg relative overflow-hidden"
+        @mouseover="handleLottieHover"
+        @mouseleave="handleLottieLeave"
+      >
+        <span class="relative z-10">Ingresar</span>
+        <Lottie
+          ref="buttonLottie"
+          name="flowers" 
+          play-on-hover 
+          :speed="1.5" 
+          loop
+          class="absolute inset-2 w-full h-full opacity-0 duration-75 ease-in-out z-0"
+          :class="{ 'opacity-100 duration-75 ease-in-out ': isLottieVisible }"
+          :renderer-settings="{ preserveAspectRatio: 'xMidYMid slice' }"
+        />
+      </UButton>
   </div>
 </template>
 
 <script setup lang="ts">
 import type { NavigationMenuItem } from '@nuxt/ui';
+import type { Lottie } from 'nuxt-lottie'; // Importa el tipo para mejor soporte TypeScript [2]
+
+const buttonLottie = ref<Lottie | null>(null);
+const isLottieVisible = ref(false);
+
+const handleLottieHover = () => {
+  isLottieVisible.value = true;
+  // Espera un pequeño momento si es necesario para que el DOM se actualice y la animación sea visible
+  // antes de intentar reproducirla.
+  if (buttonLottie.value) { 
+    buttonLottie.value.play(); // Reproduce la animación [3]
+  }
+};
+
+const handleLottieLeave = () => {
+  isLottieVisible.value = false;
+  if (buttonLottie.value) {
+    buttonLottie.value.stop(); // Detiene y resetea la animación al salir del hover [3]
+    // O buttonLottie.value.pause(); si prefieres que se quede en el último frame [3]
+  }
+};
 
 const items = ref<NavigationMenuItem[][]>([
   [
     {
-      label: "Inicio",
-      icon: "i-heroicons-home-20-solid",
-      to: "/",
-    },
-    {
       label: "Programas",
-      icon: "i-heroicons-book-open-20-solid",
       to: "https://japonizandoamerica.com/programas"
     },
     {
       label: "Contacto",
-      icon: "i-heroicons-phone-solid",
       to: "https://japonizandoamerica.com/contacto"
     }
-  ],
-  [
-    {
-      label: "Ingresar",
-      icon: "i-heroicons-arrow-right-on-rectangle-20-solid",
-      to: "https://cursos.japonizandoamerica.com/login/index.php"
-    },
   ],
 ]);
 
@@ -63,23 +105,11 @@ onBeforeUnmount(() => {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 28px 0;
   border-bottom: 0;
   z-index: 999;
 }
 
 .sticky-header {
-  padding: 28px 0;
   border-top-color: transparent;
-}
-
-@media screen and (max-width:767px) {
-    .header {
-        padding: 15px 0;
-    }
-
-    .sticky-header {
-        padding: 8px 0;
-    }
 }
 </style>

@@ -17,9 +17,11 @@
     "better-sqlite3": "^12.2.0",
     "eslint": "^9.33.0",
     "nuxt": "^4.0.3",
+    "nuxt-lottie": "^1.0.5",
     "typescript": "^5.9.2",
     "vue": "^3.5.18",
-    "vue-router": "^4.5.1"
+    "vue-router": "^4.5.1",
+    "vue3-lottie": "^3.3.1"
   },
   "devDependencies": {
     "nuxt-aos": "^1.2.5"

@@ -29,7 +29,7 @@
       </div>
     </template>
     <template #default>
-      <div class="w-full h-full px-4">
+      <div class="w-full h-full px-4 font-serif">
       <p class="mb-4">
       {{ item.description }}
       </p>
@@ -53,8 +53,8 @@
         leading
         variant="solid"
         color="primary" 
-        size="xl"
-        class="flex w-max text-center justify-center hover:outline rounded-full uppercase text-white font-bold px-8 py-3 tracking-widest">
+        size="lg"
+        class="flex w-max text-center justify-center hover:outline rounded-full uppercase text-white font-bold px-8 py-3 tracking-wide">
       Inscribirse al taller
       </UButton>
     </template>
