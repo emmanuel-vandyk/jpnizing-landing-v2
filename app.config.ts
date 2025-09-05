@@ -65,6 +65,9 @@ export default defineAppConfig({
       base: "relative bottom-0 mt-auto flex items-baseline justify-around h-20 gap-8 w-full",
     },
     button: {
+      slots: {
+        base: "rounded-full"
+      },
       variants: {
         color: {
           base: "bg-primary text-white",
@@ -81,20 +84,23 @@ export default defineAppConfig({
           color: "primary",
           variant: "solid",
           class: {
-            base: "text-white px-8 py-4 hover:outline font-serif",
+            base: "text-white px-8 py-4 hover:outline font-serif bg-gradient-to-b from-primary-200 to-primary-300",
             trailingIcon: "text-white",
-            leadingIcon: "text-white size-7"
+            leadingIcon: "text-white size-7 relative z-0"
           },
         },
         {
           color: "neutral",
           variant: "solid",
           class: {
-            base: "bg-gray-200 hover:outline hover:shadow-2xl text-black px-8 py-4 font-serif",
+            base: "bg-gradient-to-b from-gray-800 to-gray-950 text-white px-8 py-4 font-serif rounded-full",
             leadingIcon: "size-7"
           },
         }
       ],
+      defaultVariants: {
+        variant: "solid"
+      }
     },
     navigationMenu: {
       slots: {

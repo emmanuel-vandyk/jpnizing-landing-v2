@@ -23,34 +23,33 @@
       </div>
 
       <!-- Sección Derecha: Botón de Ingresar -->
-      <UButton
-        icon="i-heroicons-arrow-right-on-rectangle"
+      <AnimationButton
         to="https://cursos.japonizandoamerica.com/login/index.php"
         size="xl"
         variant="solid"
-        color="neutral"
-        class="border gap-2 rounded-full text-lg relative overflow-hidden"
+        color="primary"
+        class="gap-2 text-lg relative overflow-hidden"
         @mouseover="handleLottieHover"
         @mouseleave="handleLottieLeave"
       >
-        <span class="relative z-10">Ingresar</span>
-        <Lottie
-          ref="buttonLottie"
-          name="flowers" 
-          play-on-hover 
-          :speed="1.5" 
-          loop
-          class="absolute inset-2 w-full h-full opacity-0 duration-75 ease-in-out z-0"
-          :class="{ 'opacity-100 duration-75 ease-in-out ': isLottieVisible }"
-          :renderer-settings="{ preserveAspectRatio: 'xMidYMid slice' }"
+      <Lottie
+        ref="buttonLottie"
+        name="flowers" 
+        play-on-hover 
+        :speed="1.5" 
+        loop
+        class="absolute inset-0 w-full h-full opacity-0 duration-75 ease-in-out z-0"
+        :class="{ 'opacity-100 duration-75 ease-in-out ': isLottieVisible }"
+        :renderer-settings="{ preserveAspectRatio: 'xMidYMid slice' }"
         />
-      </UButton>
+        <span class="relative z-10">Ingresar</span>
+      </AnimationButton>
   </div>
 </template>
 
 <script setup lang="ts">
 import type { NavigationMenuItem } from '@nuxt/ui';
-import type { Lottie } from 'nuxt-lottie'; // Importa el tipo para mejor soporte TypeScript [2]
+import type { Lottie } from 'nuxt-lottie';
 
 const buttonLottie = ref<Lottie | null>(null);
 const isLottieVisible = ref(false);

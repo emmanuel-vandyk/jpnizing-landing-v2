@@ -16,7 +16,8 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxt/ui",
     "nuxt-aos",
-    "nuxt-lottie"
+    "nuxt-lottie",
+    "motion-v/nuxt"
   ],
   pages: true,
 

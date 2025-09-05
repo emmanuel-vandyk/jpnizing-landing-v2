@@ -13,15 +13,15 @@
               siguenos en nuestras redes sociales
               y descubre por qué somos la mejor opción para aprender japonés.
             </p>
-            <UButton 
-              icon="i-heroicons-academic-cap"
+            <AnimationButton 
               variant="solid" 
-              color="primary"
-              size="lg"
+              color="neutral"
+              size="xl"
               leading
-              class="flex items-center mx-auto lg:mx-0 font-extrabold rounded-full uppercase tracking-wide">
-              Empieza aquí
-            </UButton>
+              class="h-full gap-2 text-lg relative overflow-hidden font-extrabold uppercase tracking-wide"
+              >
+              <span class="relative z-10">Empieza aquí</span>
+            </AnimationButton>
           </div>
         </div>
       </div>
@@ -32,18 +32,19 @@
   </div>
 </template>
 <script setup lang="ts">
-
 </script>
-<style scoped>
-  .bg-overlay {
-    @apply flex items-center justify-between w-full;
-    background-size: 400px, 500px, 400px, 500px;
-    background-position: top left, bottom left, top right, bottom right;
-    background-repeat: no-repeat, no-repeat;
-    background-image: 
-    url("/images/flowers.png"),
-    url("/images/flowers.png"),
-    url("/images/flowers-right.png"),
-    url("/images/flowers-right.png");
-  }
+<style lang="css" scoped>
+/* Background overlay flowers */
+.bg-overlay {
+  @apply flex items-center justify-between w-full mask-t-from-80%;
+  max-width: 100vw;
+  background-size: 400px, 500px, 400px, 400px;
+  background-position: top left, bottom left, top right, bottom right;
+  background-repeat: no-repeat, no-repeat;
+  background-image: 
+  url("/images/flowers.png"),
+  url("/images/flowers.png"),
+  url("/images/flowers-right.png"),
+  url("/images/flowers-right.png");
+}
 </style>

@@ -4,7 +4,7 @@
       <div
         v-for="(sensei, idx) in senseiData"
         :key="sensei.name"
-        class="relative flex w-full items-end justify-center bg-default p-4"
+        class="relative flex w-1/3 items-end justify-center bg-default p-4"
       >
         <!-- Panel con clip-path -->
         <div :class="[panelClasses[idx], 'flex justify-between items-end w-full h-150 relative z-0']">

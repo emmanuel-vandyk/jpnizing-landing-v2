@@ -5,7 +5,7 @@
     </div>
     <div class="bg-center bg-cover h-full w-full justify-center">
       <div
-        class="relative bg-brand-background halftone-bg bg-contain bg-repeat-round min-h-screen bg-center mask-t-from-95%">
+        class="relative bg-brand-background halftone-bg bg-contain bg-repeat-round min-h-screen bg-center mask-t-from-95% mask-b-from-96% z-40">
         <div class="flex flex-col">
           <!-- Talleres Section -->
           <LazyWorkshopsSection />

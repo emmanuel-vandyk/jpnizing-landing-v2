@@ -48,15 +48,13 @@
       </div>
     </template>
     <template #footer>
-      <UButton
-        icon="i-heroicons-academic-cap"
-        leading
+      <AnimationButton
         variant="solid"
         color="primary" 
         size="lg"
         class="flex w-max text-center justify-center hover:outline rounded-full uppercase text-white font-bold px-8 py-3 tracking-wide">
-      Inscribirse al taller
-      </UButton>
+      <span class="relative z-10">Inscribirse al taller</span>
+      </AnimationButton>
     </template>
     </UCard>
 </template>

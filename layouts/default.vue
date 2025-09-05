@@ -12,7 +12,7 @@
         <NuxtPage />
       </slot>
     </main>
-    <footer class="flex flex-col w-full h-24">
+    <footer class="flex flex-col w-full h-52">
         <slot name="footer">
       <AppFooter />
       </slot>
