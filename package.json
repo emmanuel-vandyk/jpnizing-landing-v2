@@ -26,5 +26,10 @@
   },
   "devDependencies": {
     "nuxt-aos": "^1.2.5"
-  }
+  },
+  "trustedDependencies": [
+    "@parcel/watcher",
+    "@tailwindcss/oxide",
+    "unrs-resolver"
+  ]
 }
