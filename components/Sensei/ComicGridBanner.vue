@@ -15,7 +15,10 @@
           v-for="(sensei, idx) in senseiData"
           :key="sensei.name"
           :item="sensei"
-          :class="['self-end justify-self-between z-10', textBoxClasses[idx]]"
+          :class="[
+            'self-end justify-self-between z-10 absolute',
+            textBoxClasses[idx],
+          ]"
         />
       </div>
     </div>
