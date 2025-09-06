@@ -1,34 +1,21 @@
 <template>
-  <div class="containergrid w-full relative m-auto">
-    <div class="flex justify-center w-full h-160 relative z-0">
+  <div class="mx-40">
+    <div class="flex justify-between w-auto h-160 relative z-0 p-4 bg-black">
       <div
         v-for="(sensei, idx) in senseiData"
         :key="sensei.name"
-        class="relative flex w-1/3 items-end justify-center bg-default"
+        class="w-3/7 items-end justify-center"
+        :class="idx === 1 ? 'mx-[-6%]' : ''"
       >
         <!-- Panel con clip-path -->
-        <div
-          :class="[
-            panelClasses[idx],
-            'relative flex items-end justify-center w-full h-150',
-          ]"
-        >
-          <NuxtImg
-            :src="imageSources[idx]"
-            :alt="`${sensei.name} character image`"
-            :class="['character-image', imageClasses[idx]]"
-            loading="eager"
-            placeholder
-            :key="`sensei-image-${idx}-${reloadKey}`"
-          />
-        </div>
-        <!-- Caja de texto fuera del clip -->
+        <SenseiFrame v-bind="senseiFrameProps[idx]" />
+      </div>
+      <div class="absolute bottom-4 w-full flex">
         <SenseiTextBox
+          v-for="(sensei, idx) in senseiData"
+          :key="sensei.name"
           :item="sensei"
-          :class="[
-            'absolute self-end justify-self-between mb-4 top-3 z-10',
-            textBoxClasses[idx],
-          ]"
+          :class="['self-end justify-self-between z-10', textBoxClasses[idx]]"
         />
       </div>
     </div>
@@ -63,14 +50,49 @@ const textBoxClasses = [
   "justify-self-end",
 ];
 
-const panelClasses = ["panel-anto", "panel-fran", "panel-dani"];
 const imageSources = [
   "/images/anto.png",
   "/images/fran.png",
   "/images/dani.png",
 ];
 
-const imageClasses = ["image-anto", "image-fran", "image-dani"];
+const backgroundImages = [
+  "/images/panel-anto.png",
+  "/images/panel-fran.png",
+  "/images/panel-dani.png",
+];
+
+const clipPaths = [
+  "polygon(0% 0, 100% 0, 80% 100%, 0% 100%)",
+  "polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)",
+  "polygon(0% 0, 100% 0, 100% 100%, 20% 100%)",
+];
+
+const senseiImageHeights = [78, 95, 80];
+
+const senseiFrameProps = [
+  {
+    senseiImage: imageSources[0],
+    backgroundImage: backgroundImages[0],
+    clipPath: clipPaths[0],
+    senseiImageHeight: senseiImageHeights[0],
+    alt: `${senseiData[0].name} character image`,
+  },
+  {
+    senseiImage: imageSources[1],
+    backgroundImage: backgroundImages[1],
+    clipPath: clipPaths[1],
+    senseiImageHeight: senseiImageHeights[1],
+    alt: `${senseiData[1].name} character image`,
+  },
+  {
+    senseiImage: imageSources[2],
+    backgroundImage: backgroundImages[2],
+    clipPath: clipPaths[2],
+    senseiImageHeight: senseiImageHeights[2],
+    alt: `${senseiData[2].name} character image`,
+  },
+];
 
 // Force a re-render after mounting to ensure classes are properly applied
 onMounted(() => {
@@ -80,88 +102,3 @@ onMounted(() => {
   }, 50);
 });
 </script>
-<style>
-.panel-anto {
-  background-color: black;
-  clip-path: polygon(0% 0, 100% 0, 80% 100%, 0% 100%);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.panel-anto::after {
-  content: "";
-  position: absolute;
-  background-image: url("/images/panel-anto.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 95%;
-  width: 95%;
-  clip-path: polygon(0% 0, 100% 0, 80% 100%, 0% 100%);
-}
-
-.character-image {
-  width: 95%;
-  height: 95%;
-  object-fit: cover;
-  object-position: bottom center;
-  clip-path: inherit;
-  z-index: 1;
-}
-
-.image-anto {
-  clip-path: polygon(0% 0, 100% 0, 80% 100%, 0% 100%);
-}
-
-.panel-fran {
-  background-color: black;
-  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.panel-fran::after {
-  content: "";
-  position: absolute;
-  background-image: url("/images/panel-fran.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 95%;
-  width: 95%;
-  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
-}
-
-.image-fran {
-  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
-}
-
-.panel-dani {
-  background-color: black;
-  clip-path: polygon(0% 0, 100% 0, 100% 100%, 20% 100%);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.panel-dani::after {
-  content: "";
-  position: absolute;
-  background-image: url("/images/panel-dani.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 95%;
-  width: 95%;
-  clip-path: polygon(0% 0, 100% 0, 100% 100%, 20% 100%);
-}
-
-.image-dani {
-  clip-path: polygon(0% 0, 100% 0, 100% 100%, 20% 100%);
-}
-</style>
