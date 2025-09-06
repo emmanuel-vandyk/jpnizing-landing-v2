@@ -15,7 +15,11 @@
         >
           <NuxtImg
             :src="imageSources[idx]"
+            :alt="`${sensei.name} character image`"
             :class="['character-image', imageClasses[idx]]"
+            loading="eager"
+            placeholder
+            :key="`sensei-image-${idx}-${reloadKey}`"
           />
         </div>
         <!-- Caja de texto fuera del clip -->
@@ -32,6 +36,9 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from "vue";
+
+const reloadKey = ref(0);
 const senseiData = [
   {
     name: "Anto",
@@ -64,6 +71,14 @@ const imageSources = [
 ];
 
 const imageClasses = ["image-anto", "image-fran", "image-dani"];
+
+// Force a re-render after mounting to ensure classes are properly applied
+onMounted(() => {
+  // Wait for the next tick to ensure the DOM is ready
+  setTimeout(() => {
+    reloadKey.value++;
+  }, 50);
+});
 </script>
 <style>
 .panel-anto {
