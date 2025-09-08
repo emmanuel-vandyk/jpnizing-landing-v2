@@ -1,26 +1,15 @@
 <template>
   <div class="mx-40">
     <div class="flex justify-between w-auto h-160 relative z-0 p-4 bg-black">
-      <div
-        v-for="(sensei, idx) in senseiData"
-        :key="sensei.name"
-        class="w-3/7 items-end justify-center"
-        :class="idx === 1 ? 'mx-[-6%]' : ''"
-      >
+      <div v-for="(sensei, idx) in senseiData" :key="sensei.name" class="w-3/7 items-end justify-center"
+        :class="idx === 1 ? 'mx-[-6%]' : ''">
         <!-- Panel con clip-path -->
         <SenseiFrame v-bind="senseiFrameProps[idx]" />
       </div>
-      <div class="absolute bottom-4 w-full flex">
-        <SenseiTextBox
-          v-for="(sensei, idx) in senseiData"
-          :key="sensei.name"
-          :item="sensei"
-          :class="[
-            'self-end justify-self-between z-10 absolute',
-            textBoxClasses[idx],
-          ]"
-        />
-      </div>
+      <SenseiTextBox v-for="(sensei, idx) in senseiData" :key="sensei.name" :item="sensei" :class="[
+        'self-end justify-self-between z-10 absolute',
+        textBoxClasses[idx],
+      ]" />
     </div>
   </div>
 </template>
