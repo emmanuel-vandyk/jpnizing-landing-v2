@@ -4,7 +4,7 @@
       'header',
       isScrolled ? 'bg-default/50 transition-colors duration-300 ease-in-out sticky-header shadow-sm backdrop-blur-md' : 'bg-transparent duration-300'  
     ]" 
-    class="flex items-center justify-around font-serif font-extralight tracking-wide uppercase z-50 pb-2 mx-auto">
+    class="flex items-center justify-around font-serif font-extralight tracking-wide uppercase z-50 pb-2 mx-auto w-full">
 
       <!-- Sección Izquierda: Logo como un ULink con una imagen -->
       <ULink 
@@ -48,8 +48,9 @@
 </template>
 
 <script setup lang="ts">
-import type { NavigationMenuItem } from '@nuxt/ui';
 import type { Lottie } from 'nuxt-lottie';
+import { ref } from 'vue';
+import type { NavigationMenuItem } from '@nuxt/ui';
 
 const buttonLottie = ref<Lottie | null>(null);
 const isLottieVisible = ref(false);

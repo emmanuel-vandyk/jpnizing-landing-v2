@@ -18,14 +18,14 @@
         </div>
         <UCard 
           variant="solid" 
-          class="w-fit rounded-xl backdrop-blur-md border border-white/20 hover:bg-white/20 transition-colors"
+          class="w-fit rounded-xl transition-colors"
           data-aos="flip-left"
           data-aos-easing="ease-out-cubic"
           data-aos-duration="2000"
         >
           <template #default>
             <LazyNuxtImg 
-              src="/images/podcast.png" 
+              src="/images/img-podcast.png" 
               alt="Podcast en Japonés" 
               format="webp"
               class="bg-cover w-lg h-full rounded-t-xl" 
