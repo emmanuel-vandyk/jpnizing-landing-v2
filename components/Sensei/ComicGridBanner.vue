@@ -49,7 +49,6 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
 
 const reloadKey = ref(0);
 const senseiData = [

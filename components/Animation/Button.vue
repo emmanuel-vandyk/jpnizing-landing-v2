@@ -25,7 +25,6 @@
 
 <script setup lang="ts">
 import { motion } from 'motion-v'
-import { ref, reactive } from 'vue'
 
 const buttonDomRef = ref(null)
 const hovering = ref(false)

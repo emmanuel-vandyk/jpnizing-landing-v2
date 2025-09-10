@@ -14,7 +14,6 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from "vue";
 
 const props = defineProps({
   senseiImage: {
@@ -113,7 +112,7 @@ onMounted(() => {
   height: v-bind(imageHeightPercent);
   object-fit: contain;
   object-position: bottom center;
-  clip-path: fill-box;
+  clip-path: inherit;
   z-index: 1;
 }
 

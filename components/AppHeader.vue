@@ -49,7 +49,6 @@
 
 <script setup lang="ts">
 import type { Lottie } from 'nuxt-lottie';
-import { ref } from 'vue';
 import type { NavigationMenuItem } from '@nuxt/ui';
 
 const buttonLottie = ref<Lottie | null>(null);
