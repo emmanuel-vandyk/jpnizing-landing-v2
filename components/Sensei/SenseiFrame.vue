@@ -45,6 +45,10 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  flipVertically: {
+    type: Boolean,
+    default: false,
+  },
   alt: {
     type: String,
     default: "",
@@ -60,14 +64,18 @@ const mobileImageHeightPercent = computed(() => {
   const mobileHeight = props.mobileSenseiImageHeight || props.senseiImageHeight;
   return `${mobileHeight}%`;
 });
-const imageTransform = computed(() => {
-  const flip = props.flipHorizontally ? "scaleX(-1)" : "";
-  return `translateX(-45%) ${flip}`.trim();
-});
+
+const imageTransform = computed(() => `
+  translateX(-50%) 
+  translateY(5%) 
+  ${props.flipHorizontally ? "scaleX(-1)" : ""} 
+  ${props.flipVertically ? "scaleY(-1)" : ""}
+`.trim()
+);
 
 const mobileImageTransform = computed(() => {
-  const flip = props.flipHorizontally ? "scaleX(-1)" : "";
-  return `translateX(-50%) ${flip}`.trim();
+  const flipX = props.flipHorizontally ? "scaleX(-1)" : "";
+  return `translateX(-50%) ${flipX}`.trim();
 });
 
 const desktopClipPath = computed(() => props.clipPath);
@@ -105,7 +113,7 @@ onMounted(() => {
   height: v-bind(imageHeightPercent);
   object-fit: contain;
   object-position: bottom center;
-  clip-path: inherit;
+  clip-path: fill-box;
   z-index: 1;
 }
 

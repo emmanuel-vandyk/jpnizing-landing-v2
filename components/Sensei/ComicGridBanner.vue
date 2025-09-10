@@ -95,7 +95,7 @@ const clipPaths = [
 ];
 
 const mobileClipPaths = [
-  "none", // Sin clip path en móvil, usará border-radius
+  "none",
   "none",
   "none",
 ];
