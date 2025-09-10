@@ -18,7 +18,7 @@ const items: NavigationMenuItem[] = [
       <UNavigationMenu 
         :items="items" variant="pill" highlight-color="primary" :ui="{
         link: 'text-md font-semibold'
-      }" color="onDark" />
+      }" color="neutral" />
       <p class="font-semibold text-md px-2.5">
         Copyright © {{ new Date().getFullYear() }}
       </p>
@@ -28,7 +28,6 @@ const items: NavigationMenuItem[] = [
 <style lang="css" scoped>
 /* Background overlay flowers */
 .bg-overlay {
-  @apply flex items-center justify-between w-full mask-t-from-80%;
   max-width: 100vw;
   background-size: 200px, 300px, 200px, 300px;
   background-position: top left, bottom left, top right, bottom right;

@@ -4,7 +4,7 @@
       <div class="flex items-center lg:py-16 text-center lg:min-h-screen" data-aos="fade-up" data-duration="3000"> 
         <div class="flex w-full justify-center lg:p-8">
           <div class="flex flex-col justify-center items-start w-full p-4">
-            <h1 class="text-start text-6xl font-comic font-bold italic text-primary-200 mb-6 drop-shadow-lg">
+            <h1 class="text-start text-6xl font-comic font-bold italic mb-6 drop-shadow-lg px-2">
               日本化するアメリカ
             </h1>
             <h2 class="text-start text-5xl font-semibold uppercase max-w-3xl">Aprende Japonés de Forma Divertida</h2>
@@ -31,12 +31,9 @@
     </div>
   </div>
 </template>
-<script setup lang="ts">
-</script>
 <style lang="css" scoped>
 /* Background overlay flowers */
 .bg-overlay {
-  @apply flex items-center justify-between w-full mask-t-from-80%;
   max-width: 100vw;
   background-size: 400px, 500px, 400px, 400px;
   background-position: top left, bottom left, top right, bottom right;

@@ -10,7 +10,7 @@
     <div class="w-full h-full relative">
       <motion.div v-if="hovering" class="absolute pointer-events-none">
         <motion.div
-          class="absolute inset-0 rounded-full bg-primary mix-blend-difference z-10"
+          class="absolute inset-0 rounded-full bg-primary-300 mix-blend-difference z-10"
           :initial="{ scale: 0 }"
           :animate="{ x: maskPosition.x - 50, y: maskPosition.y - 50, scale: 1 }"
           :exit="{ scale: 0 }"
