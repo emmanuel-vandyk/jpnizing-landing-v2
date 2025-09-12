@@ -2,7 +2,7 @@
   <UCard
     :key="item.title"
     variant="solid"
-    class="flex flex-col items-center bg-neutral-50 w-md rounded-md pb-4 pt-0 px-0 overflow-hidden"
+    class="flex flex-col items-center bg-neutral-50 w-md min-h-[650px] rounded-md pb-4 pt-0 px-0 overflow-hidden"
     :data-aos="item.dataAos"
     :data-aos-duration="item.dataAosDuration"
     >
@@ -17,7 +17,7 @@
       :name="
         item.title === 'Taller de Conversación'
         ? 'i-heroicons-chat-bubble-left-ellipsis'
-        : item.title === 'Taller de Kanji'
+        : item.title === 'Curso Kanji'
         ? 'i-heroicons-book-open'
         : 'i-heroicons-question-mark-circle'
       "
@@ -29,22 +29,22 @@
       </div>
     </template>
     <template #default>
-      <div class="w-full h-full px-4 font-serif">
+      <div class="w-full px-4 font-serif flex-grow">
       <p class="mb-4">
       {{ item.description }}
       </p>
       <ul 
-        v-for="(features, index) in item.features"
-        :key="index"  
-        class="flex flex-col w-full items-start"
+        class="flex flex-col w-full items-start gap-1"
       >
       <li
-        class="flex items-baseline gap-2 px-2"
+      v-for="(features, index) in item.features"
+      :key="index"
+      class="flex items-baseline gap-2 px-2"
       >
-        <span class="size-2 rounded-full bg-linear-to-b from-primary-200 to-primary-300" />
-        {{ features }}
-      </li>
-      </ul>
+      <span class="size-2 rounded-full bg-linear-to-b from-primary-200 to-primary-300 flex-shrink-0 mt-1" />
+      {{ features }}
+    </li>
+    </ul>
       </div>
     </template>
     <template #footer>

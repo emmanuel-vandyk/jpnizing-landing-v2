@@ -98,7 +98,7 @@ h1 {
   @apply text-transparent bg-linear-to-b bg-clip-text from-primary-200 to-primary-300;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-style: italic;
 }
 

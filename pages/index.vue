@@ -8,7 +8,7 @@
         class="relative bg-brand-background halftone-bg bg-contain bg-repeat-round min-h-screen bg-center mask-t-from-95% mask-b-from-96% z-40">
         <div class="flex flex-col">
           <!-- Talleres Section -->
-          <LazyWorkshopsSection />
+          <LazyCoursesSection />
           <!-- Podcast Section -->
           <LazyPodcastSection />
           <!-- Sensei Section -->
