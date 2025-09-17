@@ -1,26 +1,29 @@
 <template>
-  <UContainer id="items" class="flex flex-col justify-center items-center py-16 min-h-screen mt-32">
-    <div 
-      class="py-2 mb-8 w-full"
-      data-aos="fade-up"
-      data-aos-duration="950"
-    >
+  <UContainer
+    id="items"
+    class="flex flex-col justify-center items-center py-16 min-h-screen mt-28"
+  >
+    <div class="py-2 mb-8 w-full" data-aos="fade-up" data-aos-duration="950">
       <div class="flex flex-col justify-start items-center w-full h-full">
-        <h2 
-          class="text-5xl font-bold text-center w-full lg:py-4"
-        >
+        <h2 class="text-5xl font-bold text-center w-full lg:py-4">
           Conóce nuestros cursos
         </h2>
       </div>
-    </div>  
-    <div class="grid lg:grid-cols-2 gap-8 w-full place-items-center lg:place-items-between">
-      <CoursesCard  v-for="item in items" :key="item.title" :item="item" />
+    </div>
+    <div
+      class="grid lg:grid-cols-2 gap-8 w-full max-w-7xl place-items-center mx-auto"
+    >
+      <CoursesCard
+        v-for="item in items"
+        :key="item.title"
+        :item="item"
+        class="h-full"
+      />
     </div>
   </UContainer>
 </template>
 
 <script setup>
-
 const items = [
   {
     title: "Taller de Anime",
@@ -31,11 +34,11 @@ const items = [
       "🗣️ Expresiones cotidianas tal como las usan los personajes.",
       "🔄 Diferentes niveles de lenguaje: formal, casual y dialectos únicos.",
       "🎌 Cultura japonesa: gestos, valores y modismos.",
-      "🎬 Práctica activa: ver anime sin subtítulos, analizar escenas y recrear diálogos."
+      "🎬 Práctica activa: ver anime sin subtítulos, analizar escenas y recrear diálogos.",
     ],
-    src: "/images/conversation.png",
+    src: "/images/taller-de-anime-2.webp",
     dataAos: "fade-right",
-    dataAosDuration: "1000"
+    dataAosDuration: "1000",
   },
   {
     title: "Curso Kanji",
@@ -48,9 +51,9 @@ const items = [
       "📚 Conocimiento: conceptos básicos, matemáticas, ciencia, arte y comunicación.",
       "👤 Cuerpo, emociones y sociedad: Partes del cuerpo, posturas, emociones, voz, comunidades y vínculos familiares.",
     ],
-    src: "/images/kanji.png",
+    src: "/images/curso-kanji.webp",
     dataAos: "fade-left",
-    dataAosDuration: "1000"
+    dataAosDuration: "1000",
   },
   {
     title: "Japonés con Animé | N5",
@@ -58,13 +61,13 @@ const items = [
     description:
       "Prepárate para descubrir los secretos del hiragana, los personajes más amigables y divertidos del japonés. Aprenderás a dibujar estos símbolos mágicos y entender sus trucos sonoros. En este taller veremos:",
     features: [
-        "Diptongos: la mezcla explosiva de sonidos que da ritmo al idioma.",
-        "Tenten y maru: los puntitos ninja y el círculo travieso que cambian la pronunciación.",
-        "Escritura práctica: ¡termina escribiendo tu nombre en hiragana como un profesional! 🎌✨"
-      ],
-    src: "/images/conversation.png",
+      "Diptongos: la mezcla explosiva de sonidos que da ritmo al idioma.",
+      "Tenten y maru: los puntitos ninja y el círculo travieso que cambian la pronunciación.",
+      "Escritura práctica: ¡termina escribiendo tu nombre en hiragana como un profesional! 🎌✨",
+    ],
+    src: "/images/n5.webp",
     dataAos: "fade-right",
-    dataAosDuration: "1000"
+    dataAosDuration: "1000",
   },
   {
     title: "Japonés con Animé | N4",
@@ -76,9 +79,9 @@ const items = [
       "Vocabulario y kanji básicos: términos esenciales para la vida diaria.",
       "Práctica aplicada: situaciones reales para rendir el N4 con éxito.",
     ],
-    src: "/images/conversation.png",
+    src: "/images/n4.webp",
     dataAos: "fade-left",
-    dataAosDuration: "1000"
+    dataAosDuration: "1000",
   },
   {
     title: "Japonés con Animé | N3",
@@ -90,9 +93,9 @@ const items = [
       "Profesores nativos japoneses",
       "Temas culturales actuales",
     ],
-    src: "/images/conversation.png",
+    src: "/images/n3.webp",
     dataAos: "fade-right",
-    dataAosDuration: "1000"
+    dataAosDuration: "1000",
   },
 ];
 </script>

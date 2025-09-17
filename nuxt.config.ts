@@ -4,10 +4,12 @@ export default defineNuxtConfig({
   css: ["@/assets/css/main.css"],
 
   icon: {
-    customCollections: [{
-      prefix: 'custom',
-      dir: '/assets/icons'
-    }]
+    customCollections: [
+      {
+        prefix: "custom",
+        dir: "./assets/icons",
+      },
+    ],
   },
 
   modules: [
@@ -15,9 +17,10 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@nuxt/image",
     "@nuxt/ui",
+    "@nuxt/icon",
     "nuxt-aos",
     "nuxt-lottie",
-    "motion-v/nuxt"
+    "motion-v/nuxt",
   ],
   pages: true,
 
@@ -43,23 +46,23 @@ export default defineNuxtConfig({
     colorMode: false,
     theme: {
       colors: [
-        'primary',
-        'secondary',
-        'tertiary',
-        'success',
-        'warning',
-        'info',
-        'error',
-        'amber',
-        'onDark'
-      ]
-    }
+        "primary",
+        "secondary",
+        "tertiary",
+        "success",
+        "warning",
+        "info",
+        "error",
+        "amber",
+        "onDark",
+      ],
+    },
   },
 
   lottie: {
-    componentName: 'Lottie', // Optional: Customize the component name
-    lottieFolder: '/assets/lottie', // Optional: Customize the Lottie folder path
+    componentName: "Lottie", // Optional: Customize the component name
+    lottieFolder: "/assets/lottie", // Optional: Customize the Lottie folder path
     autoFolderCreation: true, // Optional: Auto create lottie folder (default: true)
-    enableLogs: true // Optional: Enable console logs from module (default: true)
-  }
+    enableLogs: true, // Optional: Enable console logs from module (default: true)
+  },
 });

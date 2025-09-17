@@ -66,7 +66,7 @@ export default defineAppConfig({
     },
     button: {
       slots: {
-        base: "rounded-full"
+        base: "rounded-full",
       },
       variants: {
         color: {
@@ -77,7 +77,7 @@ export default defineAppConfig({
         },
         size: {
           lg: "gap-3",
-        }
+        },
       },
       compoundVariants: [
         {
@@ -86,7 +86,7 @@ export default defineAppConfig({
           class: {
             base: "text-white px-8 py-4 hover:outline font-serif bg-gradient-to-b from-primary-200 to-primary-300",
             trailingIcon: "text-white",
-            leadingIcon: "text-white size-7 relative z-0"
+            leadingIcon: "text-white size-7 relative z-0",
           },
         },
         {
@@ -94,68 +94,68 @@ export default defineAppConfig({
           variant: "solid",
           class: {
             base: "bg-gradient-to-b from-gray-800 to-gray-950 text-white px-8 py-4 font-serif rounded-full",
-            leadingIcon: "size-7"
+            leadingIcon: "size-7",
           },
-        }
+        },
       ],
       defaultVariants: {
-        variant: "solid"
-      }
+        variant: "solid",
+      },
     },
     navigationMenu: {
       slots: {
         list: "flex gap-3",
-        link: "text-xl font-semibold before:rounded-full"
+        link: "text-xl font-semibold before:rounded-full",
       },
       variants: {
         active: {
           true: {
-            link: "bg-primary rounded-full before:text-default",
-            
+            link: "rounded-full text-white bg-gradient-to-b from-primary-200 to-primary-300",
           },
         },
         color: {
           neutral: {
             link: "text-black leading-10.5",
-            linkLeadingIcon: "text-black"
           },
-        }
+        },
       },
       compoundVariants: [
         {
           color: "primary",
           variant: "pill",
-          class: {
-            link: [
-              'text-white transition-colors'
-            ]
-          }
+          active: true,
+          class: {},
         },
         {
           color: "neutral",
           variant: "pill",
+          active: true,
           class: {
-            childLink: [
-              ""
-            ],
-          
-          }
-        }  
+            link: "text-white",
+          },
+        },
       ],
       defaultVariants: {
         variant: "pill",
-        color: "neutral",
-      }
+        color: "primary",
+      },
     },
     card: {
       slots: {
         root: "border-3 border-black",
         body: "bg-neutral-50",
-        footer: "bg-neutral-50"
+        footer: "bg-neutral-50",
       },
+      compoundVariants: [
+        {
+          class: {
+            header: "w-full px-0",
+          },
+        },
+      ],
       defaultVariants: {
-        variant: "solid"
-      }         
-    }
+        variant: "solid",
+      },
+    },
   },
 });
