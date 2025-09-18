@@ -131,7 +131,6 @@ const allCourses: CourseItem[] = [
   },
   {
     title: "Japonés con Anime | N3",
-    color: "#ff51b3",
     level: "N3",
     description:
       "Este curso es perfecto para aquellos que quieren dominar el nivel intermedio de japonés. Con este curso, podrán prepararse y presentar el JLPT N3.",

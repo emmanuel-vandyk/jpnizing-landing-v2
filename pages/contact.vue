@@ -67,8 +67,7 @@ useSeoMeta({
 const socialMediaCards: SocialMediaCard[] = [
   {
     title: "WhatsApp",
-    description:
-      "Chatea con nosotros directamente y resuelve tus dudas al instante.",
+    description: "Chatea con nosotros y resuelve tus dudas al instante.",
     iconName: "i-custom-whatsapp",
     iconClass: "size-11",
     gradientClass: "bg-gradient-to-b from-green-400 to-green-500",

@@ -39,6 +39,7 @@
         color="primary"
         size="lg"
         class="flex w-max text-center justify-center hover:outline rounded-full uppercase font-bold px-8 py-3 tracking-wide mb-4"
+        to="https://cursos.japonizandoamerica.com/login/index.php"
       >
         <span class="relative z-10">Inscribirse al taller</span>
       </AnimationButton>

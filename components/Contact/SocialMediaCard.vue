@@ -1,13 +1,13 @@
 <template>
   <UCard
     :class="[
-      'flex flex-col items-center bg-neutral-50 p-8 rounded-md border-3 border-black hover:shadow-lg transition-all duration-300',
+      'flex flex-col items-center h-full bg-neutral-50 p-8 rounded-md border-3 border-black hover:shadow-lg transition-all duration-300',
       cardClass,
     ]"
     :data-aos="dataAos"
     :data-aos-duration="dataAosDuration"
   >
-    <div class="flex items-center gap-4">
+    <div class="flex flex-col items-center flex-grow">
       <div
         :class="[
           'size-16 rounded-full flex items-center justify-center mb-6',
@@ -17,10 +17,10 @@
         <UIcon :name="iconName" :class="iconClass" />
       </div>
       <h3 class="text-2xl font-bold mb-4 text-center">{{ title }}</h3>
+      <p class="text-center font-serif text-gray-600 mb-6 flex-grow">
+        {{ description }}
+      </p>
     </div>
-    <p class="text-center font-serif text-gray-600 mb-6">
-      {{ description }}
-    </p>
     <AnimationButton
       :to="link"
       :external="external"
@@ -28,7 +28,7 @@
       variant="solid"
       color="primary"
       size="lg"
-      class="w-full justify-center"
+      class="w-full justify-center mt-auto"
     >
       <span :class="buttonTextClass">{{ buttonText }}</span>
     </AnimationButton>
