@@ -36,9 +36,10 @@ const items = [
       "🎌 Cultura japonesa: gestos, valores y modismos.",
       "🎬 Práctica activa: ver anime sin subtítulos, analizar escenas y recrear diálogos.",
     ],
-    src: "/images/taller-de-anime-2.webp",
+    src: "/images/taller-anime.webp",
     dataAos: "fade-right",
     dataAosDuration: "1000",
+    to: "https://cursos.japonizandoamerica.com/course/view.php?id=5",
   },
   {
     title: "Curso Kanji",
@@ -54,6 +55,7 @@ const items = [
     src: "/images/curso-kanji.webp",
     dataAos: "fade-left",
     dataAosDuration: "1000",
+    to: "https://cursos.japonizandoamerica.com/course/view.php?id=8",
   },
   {
     title: "Japonés con Animé | N5",
@@ -68,6 +70,7 @@ const items = [
     src: "/images/n5.webp",
     dataAos: "fade-right",
     dataAosDuration: "1000",
+    to: "https://cursos.japonizandoamerica.com/course/view.php?id=2",
   },
   {
     title: "Japonés con Animé | N4",
@@ -82,6 +85,7 @@ const items = [
     src: "/images/n4.webp",
     dataAos: "fade-left",
     dataAosDuration: "1000",
+    to: "https://cursos.japonizandoamerica.com/course/view.php?id=3",
   },
   {
     title: "Japonés con Animé | N3",
@@ -96,6 +100,7 @@ const items = [
     src: "/images/n3.webp",
     dataAos: "fade-right",
     dataAosDuration: "1000",
+    to: "https://cursos.japonizandoamerica.com/course/view.php?id=12",
   },
 ];
 </script>

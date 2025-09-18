@@ -3,6 +3,7 @@
     ref="buttonDomRef"
     class="relative overflow-hidden"
     v-bind="$attrs"
+    target="_blank"
     @mouseenter="hovering = true"
     @mouseleave="hovering = false"
     @mousemove="onMouseMove"

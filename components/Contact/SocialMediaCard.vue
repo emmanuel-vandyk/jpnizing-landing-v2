@@ -28,7 +28,7 @@
       variant="solid"
       color="primary"
       size="lg"
-      class="w-full justify-center mt-auto"
+      class="w-full justify-center mt-auto text-center"
     >
       <span :class="buttonTextClass">{{ buttonText }}</span>
     </AnimationButton>

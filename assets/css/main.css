@@ -63,7 +63,7 @@
   /* Accent and contrast colors */
   --ui-color-accent-500: #ba8376;
   --ui-color-contrast-500: #281713;
-  
+
   /* Background color */
   --ui-color-bg: #fff7f3;
 
@@ -82,10 +82,10 @@
 
 /* Theme configuration - Sin PPNeue Montreal */
 @theme default {
-  --font-sans: 'Dela Gothic One', sans-serif;
-  --font-serif: 'Roboto Slab', serif;
-  --font-comic: 'Mochiy Pop P One', cursive;
-  --font-mono: 'Courier New', monospace;
+  --font-sans: "Dela Gothic One", sans-serif;
+  --font-serif: "Roboto Slab", serif;
+  --font-comic: "Mochiy Pop P One", cursive;
+  --font-mono: "Courier New", monospace;
 }
 
 /* Global styles mínimos */
@@ -98,7 +98,9 @@ h1 {
   @apply text-transparent bg-linear-to-b bg-clip-text from-primary-200 to-primary-300;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-style: italic;
 }
 
@@ -106,6 +108,8 @@ ul {
   @apply from-primary-200 to-primary-300;
 }
 
-p, li, h3 {
+p,
+li,
+h3 {
   color: var(--ui-color-base);
 }

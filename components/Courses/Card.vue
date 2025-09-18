@@ -2,7 +2,7 @@
   <UCard
     :key="item.title"
     variant="solid"
-    class="flex flex-col items-center bg-neutral-50 w-md min-h-[650px] rounded-md p-0"
+    class="flex flex-col items-center bg-neutral-50 w-md min-h-[650px] rounded-md p-0 hover:shadow-lg transition-all duration-300"
     :data-aos="item.dataAos"
     :data-aos-duration="item.dataAosDuration"
   >
@@ -39,7 +39,7 @@
         color="primary"
         size="lg"
         class="flex w-max text-center justify-center hover:outline rounded-full uppercase font-bold px-8 py-3 tracking-wide mb-4"
-        to="https://cursos.japonizandoamerica.com/login/index.php"
+        :to="item.to"
       >
         <span class="relative z-10">Inscribirse al taller</span>
       </AnimationButton>
@@ -54,3 +54,12 @@ defineProps({
   },
 });
 </script>
+<style scoped>
+/* Hover effects for cards */
+.hover\:shadow-lg:hover {
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: translateY(-2px);
+}
+</style>

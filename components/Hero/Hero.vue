@@ -26,14 +26,14 @@
               para aprender japonés.
             </p>
             <AnimationButton
-              to="https://cursos.japonizandoamerica.com/login/index.php"
+              to="https://cursos.japonizandoamerica.com/course/view.php?id=16"
               variant="solid"
               color="neutral"
               size="xl"
               leading
               class="h-full gap-2 text-lg relative overflow-hidden font-extrabold uppercase tracking-wide"
             >
-              <span class="relative z-10">Empieza aquí</span>
+              <span class="relative z-10">Prueba nuestro curso gratuito</span>
             </AnimationButton>
           </div>
         </div>

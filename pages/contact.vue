@@ -1,5 +1,7 @@
 <template>
-  <div class="min-h-screen">
+  <div
+    class="min-h-screen halftone-bg mask-t-from-90% lg:mask-t-from-80% mask-b-from-96% lg:mask-b-from-94%"
+  >
     <UContainer
       class="flex flex-col justify-center items-center py-16 min-h-screen mt-32"
     >
@@ -123,16 +125,20 @@ onMounted(() => {
   }
 });
 </script>
+<style scoped>
+.halftone-bg {
+  background-image:
+    radial-gradient(circle at center, #ede8d0 0.25rem, transparent 0),
+    radial-gradient(circle at center, #efe8d9 0.25rem, transparent 0);
+  background-size: 1.4rem 1.4rem;
+  background-position:
+    0 0,
+    0.65rem 0.65rem;
+  background-clip: content-box;
+}
+</style>
 
 <style scoped>
-/* Hover effects for cards */
-.hover\:shadow-lg:hover {
-  box-shadow:
-    0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  transform: translateY(-2px);
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .grid {

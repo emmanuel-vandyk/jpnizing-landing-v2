@@ -56,7 +56,8 @@
       variant="solid"
       color="neutral"
       size="xl"
-      class="px-12 py-4 text-lg"
+      class="px-12 py-4 text-lg relative z-30"
+      target="_self"
     >
       <span class="relative z-10">Ver Nuestros Programas</span>
     </AnimationButton>

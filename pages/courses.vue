@@ -1,5 +1,7 @@
 <template>
-  <div class="min-h-screen">
+  <div
+    class="min-h-screen halftone-bg mask-t-from-90% lg:mask-t-from-80% mask-b-from-96% lg:mask-b-from-94%"
+  >
     <UContainer
       class="flex flex-col justify-center items-center py-16 min-h-screen mt-32"
     >
@@ -81,6 +83,7 @@ const allCourses: CourseItem[] = [
     src: "/images/n5.webp",
     dataAos: "fade-left",
     dataAosDuration: "1000",
+    to: "https://cursos.japonizandoamerica.com/course/view.php?id=2",
   },
   {
     title: "Japonés con Anime | N5 - Período 2",
@@ -97,6 +100,7 @@ const allCourses: CourseItem[] = [
     src: "/images/n5-2.webp",
     dataAos: "fade-right",
     dataAosDuration: "1200",
+    to: "https://cursos.japonizandoamerica.com/course/view.php?id=11",
   },
   {
     title: "Japonés con Anime | N5 - Período 3",
@@ -113,6 +117,7 @@ const allCourses: CourseItem[] = [
     src: "/images/n5-3.webp",
     dataAos: "fade-left",
     dataAosDuration: "1400",
+    to: "https://cursos.japonizandoamerica.com/course/view.php?id=14",
   },
   {
     title: "Japonés con Anime | N4",
@@ -128,6 +133,7 @@ const allCourses: CourseItem[] = [
     src: "/images/n4.webp",
     dataAos: "fade-right",
     dataAosDuration: "1000",
+    to: "https://cursos.japonizandoamerica.com/course/view.php?id=3",
   },
   {
     title: "Japonés con Anime | N3",
@@ -143,6 +149,7 @@ const allCourses: CourseItem[] = [
     src: "/images/n3.webp",
     dataAos: "fade-left",
     dataAosDuration: "1200",
+    to: "https://cursos.japonizandoamerica.com/course/view.php?id=12",
   },
   {
     title: "Kanji, Cultura y Tradiciones Japonesas",
@@ -157,6 +164,7 @@ const allCourses: CourseItem[] = [
     src: "/images/kanji-cultura-tradicion.webp",
     dataAos: "fade-right",
     dataAosDuration: "1400",
+    to: "https://cursos.japonizandoamerica.com/course/view.php?id=13",
   },
   {
     title: "Curso Preparatorio JLPT N5",
@@ -171,6 +179,7 @@ const allCourses: CourseItem[] = [
     src: "/images/jlpt-n5.webp",
     dataAos: "fade-left",
     dataAosDuration: "1000",
+    to: "https://cursos.japonizandoamerica.com/course/view.php?id=9",
   },
   {
     title: "Curso Preparatorio JLPT N4",
@@ -185,6 +194,7 @@ const allCourses: CourseItem[] = [
     src: "/images/jlpt-n4.webp",
     dataAos: "fade-right",
     dataAosDuration: "1200",
+    to: "https://cursos.japonizandoamerica.com/course/view.php?id=10",
   },
   {
     title: "Japonés para Viajeros",
@@ -199,6 +209,7 @@ const allCourses: CourseItem[] = [
     src: "/images/japones-para-viajeros.webp",
     dataAos: "fade-left",
     dataAosDuration: "1400",
+    to: "https://cursos.japonizandoamerica.com/course/view.php?id=6",
   },
   {
     title: "Curso Kanji",
@@ -213,6 +224,7 @@ const allCourses: CourseItem[] = [
     src: "/images/curso-kanji.webp",
     dataAos: "fade-right",
     dataAosDuration: "1000",
+    to: "https://cursos.japonizandoamerica.com/course/view.php?id=8",
   },
   {
     title: "Taller de Conversación",
@@ -227,6 +239,7 @@ const allCourses: CourseItem[] = [
     src: "/images/taller-de-conversacion.webp",
     dataAos: "fade-left",
     dataAosDuration: "1200",
+    to: "https://cursos.japonizandoamerica.com/course/view.php?id=4",
   },
   {
     title: "Taller de Anime",
@@ -241,6 +254,7 @@ const allCourses: CourseItem[] = [
     src: "/images/taller-anime.webp",
     dataAos: "fade-right",
     dataAosDuration: "1400",
+    to: "https://cursos.japonizandoamerica.com/course/view.php?id=5",
   },
   {
     title: "Curso de Okinawense",
@@ -255,6 +269,7 @@ const allCourses: CourseItem[] = [
     src: "/images/curso-okinawense.webp",
     dataAos: "fade-left",
     dataAosDuration: "1000",
+    to: "https://cursos.japonizandoamerica.com/course/view.php?id=7",
   },
   {
     title: "Mini Curso de Japonés | Inicial",
@@ -269,6 +284,7 @@ const allCourses: CourseItem[] = [
     src: "/images/mini-curso-japones.webp",
     dataAos: "fade-right",
     dataAosDuration: "1200",
+    to: "https://cursos.japonizandoamerica.com/course/view.php?id=16",
   },
 ];
 
@@ -291,3 +307,15 @@ onMounted(() => {
   }
 });
 </script>
+<style scoped>
+.halftone-bg {
+  background-image:
+    radial-gradient(circle at center, #ede8d0 0.25rem, transparent 0),
+    radial-gradient(circle at center, #efe8d9 0.25rem, transparent 0);
+  background-size: 1.4rem 1.4rem;
+  background-position:
+    0 0,
+    0.65rem 0.65rem;
+  background-clip: content-box;
+}
+</style>

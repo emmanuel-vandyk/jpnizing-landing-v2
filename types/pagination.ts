@@ -23,4 +23,5 @@ export interface CourseItem {
   dataAosDuration: string;
   level?: string;
   period?: string;
+  to?: string;
 }
