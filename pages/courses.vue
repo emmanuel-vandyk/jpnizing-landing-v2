@@ -239,7 +239,7 @@ const allCourses: CourseItem[] = [
       "🎌 Cultura japonesa: gestos, valores y modismos",
       "🎬 Práctica activa: ver anime sin subtítulos, analizar escenas y recrear diálogos",
     ],
-    src: "/images/taller-de-anime-2.webp",
+    src: "/images/taller-anime.webp",
     dataAos: "fade-right",
     dataAosDuration: "1400",
   },
