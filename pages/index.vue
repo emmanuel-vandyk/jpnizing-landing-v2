@@ -5,10 +5,11 @@
     </div>
     <div class="bg-center bg-cover h-full w-full justify-center">
       <div
-        class="relative bg-brand-background halftone-bg bg-contain bg-repeat-round min-h-screen bg-center mask-t-from-95% mask-b-from-96% z-40">
+        class="relative bg-brand-background halftone-bg bg-contain bg-repeat-round min-h-screen bg-center mask-t-from-95% mask-b-from-98% z-20"
+      >
         <div class="flex flex-col">
           <!-- Talleres Section -->
-          <LazyWorkshopsSection />
+          <LazyCoursesSection />
           <!-- Podcast Section -->
           <LazyPodcastSection />
           <!-- Sensei Section -->
@@ -29,13 +30,13 @@ definePageMeta({
 </script>
 <style scoped>
 .halftone-bg {
-  background-image: radial-gradient(
-    circle at center,
-    #ede8d0 0.25rem,
-    transparent 0
-  ), radial-gradient(circle at center, #efe8d9 0.25rem, transparent 0);
+  background-image:
+    radial-gradient(circle at center, #ede8d0 0.25rem, transparent 0),
+    radial-gradient(circle at center, #efe8d9 0.25rem, transparent 0);
   background-size: 1.4rem 1.4rem;
-  background-position: 0 0, 0.65rem 0.65rem;
+  background-position:
+    0 0,
+    0.65rem 0.65rem;
   background-clip: content-box;
 }
 </style>

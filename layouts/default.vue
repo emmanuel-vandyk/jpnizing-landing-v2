@@ -5,20 +5,16 @@
         <AppHeader />
       </slot>
     </header>
-    <main
-      class="flex flex-col h-min-screen w-full font-sans"
-    >
+    <main class="flex flex-col h-min-screen w-full font-sans halftone-bg">
       <slot name="default">
         <NuxtPage />
       </slot>
     </main>
     <footer class="flex flex-col w-full h-52 font-serif">
-        <slot name="footer">
-      <AppFooter />
+      <slot name="footer">
+        <AppFooter />
       </slot>
     </footer>
   </div>
 </template>
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
