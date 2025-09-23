@@ -1,0 +1,42 @@
+<template>
+    <div 
+      class="min-h-screen py-16 w-full"
+    >
+      <UContainer id="podcast" class="flex flex-col items-center justify-center w-full py-12">
+        <div 
+          class="text-center mb-12 p-4"
+          data-aos="fade-up"
+        >
+          <div 
+        >
+            <h2 class="text-5xl font-bold mb-6 py-4">Podcast en Japonés</h2>
+            <p class="text-xl max-w-2xl mx-auto pb-4 font-serif font-light">
+              Mejora tu comprensión auditiva con nuestro podcast semanal. Historias,
+              entrevistas y lecciones en japonés real.
+            </p>
+          </div>
+        </div>
+        <UCard 
+          variant="solid" 
+          class="w-fit rounded-xl transition-colors"
+          data-aos="flip-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="2000"
+        >
+          <template #default>
+            <LazyNuxtImg 
+              src="/images/img-podcast.png" 
+              alt="Podcast en Japonés" 
+              format="webp"
+              class="bg-cover w-lg h-full rounded-t-xl" 
+             />
+          </template>
+          <template #footer>
+            <div class="h-16">
+              <p class="text-2xl font-bold -mt-8">Podcast en Japonés</p>
+            </div>
+          </template>
+        </UCard>
+      </UContainer>
+      </div>
+</template>
