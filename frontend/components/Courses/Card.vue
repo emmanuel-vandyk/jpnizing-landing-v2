@@ -2,7 +2,7 @@
   <UCard
     :key="item.title"
     variant="solid"
-    class="flex flex-col items-center bg-neutral-50 w-md min-h-[650px] rounded-md p-0 hover:shadow-lg transition-all duration-300"
+    class="flex flex-col items-center justify-between bg-neutral-50 w-md min-h-[650px] h-full rounded-md p-0 hover:shadow-lg transition-all duration-300"
     :data-aos="item.dataAos"
     :data-aos-duration="item.dataAosDuration"
   >
@@ -15,7 +15,7 @@
       </div>
     </template>
     <template #default>
-      <div class="w-full px-4 font-serif flex-grow">
+      <div class="w-full px-4 font-serif flex-grow overflow-auto">
         <p>
           {{ item.description }}
         </p>
@@ -34,15 +34,17 @@
       </div>
     </template>
     <template #footer>
-      <AnimationButton
+      <div class="w-full h-full flex justify-center items-center">
+        <AnimationButton
         variant="solid"
         color="primary"
         size="lg"
-        class="flex w-max text-center justify-center hover:outline rounded-full uppercase font-bold px-8 py-3 tracking-wide mb-4"
+        class="flex text-sm md:text-md tracking-wide uppercase mb-4"
         :to="item.to"
       >
         <span class="relative z-10">Inscribirse al taller</span>
       </AnimationButton>
+      </div>
     </template>
   </UCard>
 </template>

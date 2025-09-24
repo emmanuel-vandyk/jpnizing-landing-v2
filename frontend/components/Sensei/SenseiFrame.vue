@@ -133,7 +133,6 @@ onMounted(() => {
 @media (max-width: 1023px) {
   .sensei-panel {
     clip-path: v-bind(mobileClipPathValue);
-    border-radius: 12px;
     overflow: hidden;
   }
   

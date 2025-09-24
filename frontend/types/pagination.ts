@@ -19,8 +19,6 @@ export interface CourseItem {
   description: string;
   features: string[];
   src: string;
-  dataAos: string;
-  dataAosDuration: string;
   level?: string;
   period?: string;
   to?: string;

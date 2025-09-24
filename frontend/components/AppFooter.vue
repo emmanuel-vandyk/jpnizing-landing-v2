@@ -13,36 +13,37 @@ const items: NavigationMenuItem[] = [
 
 <template>
   <div
-    class="flex flex-col items-center h-full max-h-56 bg-overlay bg-default/50 mask-t-from-86%"
+    class="flex flex-col items-center w-full h-full max-h-56 bg-overlay bg-default/50 mask-t-from-90%"
   >
-    <div class="flex flex-col justify-center items-center w-full h-full">
+    <div class="flex flex-col justify-center items-center w-full h-full mx-auto">
       <UNavigationMenu
         :items="items"
         variant="pill"
         highlight-color="primary"
         :ui="{
-          link: 'text-md font-semibold',
+          link: 'flex justify-center font-semibold p-0 text-center',
+          linkLabel: 'text-sm md:text-lg break-words',
+          linkTrailingIcon: 'hidden',
+          childLinkLabel: 'w-full break-words', 
         }"
         color="neutral"
       />
-      <p class="font-semibold text-md px-2.5">
+      <p class="font-semibold text-sm md:text-lg px-2.5">
         Copyright © {{ new Date().getFullYear() }}
       </p>
     </div>
   </div>
 </template>
 <style lang="css" scoped>
-/* Background overlay flowers */
 .bg-overlay {
-  max-width: 100vw;
   height: 100%;
-  background-size: 200px, 300px, 200px, 300px;
+  background-size: 20% auto, 25% auto, 20% auto, 25% auto; 
   background-position:
     top left,
     bottom left,
     top right,
     bottom right;
-  background-repeat: no-repeat, no-repeat;
+  background-repeat: no-repeat;
   background-image:
     url("/images/flowers.png"), url("/images/flowers.png"),
     url("/images/flowers-right.png"), url("/images/flowers-right.png");

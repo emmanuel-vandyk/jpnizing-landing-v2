@@ -1,19 +1,17 @@
 <template>
   <div
-    class="min-h-screen halftone-bg mask-t-from-90% lg:mask-t-from-80% mask-b-from-96% lg:mask-b-from-94%"
+    class="min-h-screen halftone-bg mask-t-from-93% lg:mask-t-from-85% mask-b-from-96% lg:mask-b-from-94%"
   >
     <UContainer
-      class="flex flex-col justify-center items-center py-16 min-h-screen mt-32"
+      class="flex flex-col justify-center items-center pb-16 min-h-screen mt-32"
     >
       <!-- Header Section -->
-      <div class="py-2 mb-8 w-full">
+      <div class="py-2 mb-8 w-full" data-aos="fade-up" data-aos-duration="950">
         <div class="flex flex-col justify-start items-center w-full h-full">
-          <h2 class="text-5xl font-bold text-center w-full lg:py-4">
+          <h2 class="text-center text-3xl md:text-4xl lg:text-5xl font-semibold uppercase max-w-full leading-tight mb-4 lg:mb-6 break-words hyphens-auto">
             Nuestros cursos
           </h2>
-          <p
-            class="text-xl text-center mt-4 font-serif text-gray-600 max-w-3xl"
-          >
+          <p class="text-xl text-center mt-4 font-serif text-gray-600 max-w-3xl">
             Descubre todos nuestro programa de cursos de japonés diseñados para
             diferentes niveles e intereses. Desde principiantes hasta avanzados,
             tenemos el programa perfecto para ti.
@@ -24,11 +22,13 @@
       <!-- Courses Grid -->
       <div
         class="grid lg:grid-cols-2 gap-8 w-full max-w-7xl place-items-center"
-        style="grid-template-rows: repeat(auto-fit, minmax(400px, 1fr))"
+        style="grid-template-rows: repeat(auto-fit, minmax(300px, 1fr))"
       >
         <CoursesCard
           v-for="item in paginatedCourses.items"
           :key="item.title"
+          data-aos="fade-up"
+          data-aos-duration="1200"
           :item="item"
           class="w-10/12 h-full"
         />
@@ -81,8 +81,6 @@ const allCourses: CourseItem[] = [
       "✍️ Escritura práctica: ¡termina escribiendo tu nombre en hiragana como un profesional! 🎌✨",
     ],
     src: "/images/n5.webp",
-    dataAos: "fade-left",
-    dataAosDuration: "1000",
     to: "https://cursos.japonizandoamerica.com/course/view.php?id=2",
   },
   {
@@ -115,8 +113,6 @@ const allCourses: CourseItem[] = [
       "💬 Conversación práctica: aplica todo lo aprendido en situaciones reales",
     ],
     src: "/images/n5-3.webp",
-    dataAos: "fade-left",
-    dataAosDuration: "1400",
     to: "https://cursos.japonizandoamerica.com/course/view.php?id=14",
   },
   {
@@ -131,8 +127,6 @@ const allCourses: CourseItem[] = [
       "🎌 Cultura japonesa: comprende el contexto cultural del idioma",
     ],
     src: "/images/n4.webp",
-    dataAos: "fade-right",
-    dataAosDuration: "1000",
     to: "https://cursos.japonizandoamerica.com/course/view.php?id=3",
   },
   {
@@ -147,8 +141,6 @@ const allCourses: CourseItem[] = [
       "🎭 Expresiones idiomáticas y lenguaje natural",
     ],
     src: "/images/n3.webp",
-    dataAos: "fade-left",
-    dataAosDuration: "1200",
     to: "https://cursos.japonizandoamerica.com/course/view.php?id=12",
   },
   {
@@ -177,8 +169,6 @@ const allCourses: CourseItem[] = [
       "📊 Seguimiento personalizado: evalúa tu progreso constantemente",
     ],
     src: "/images/jlpt-n5.webp",
-    dataAos: "fade-left",
-    dataAosDuration: "1000",
     to: "https://cursos.japonizandoamerica.com/course/view.php?id=9",
   },
   {
@@ -192,8 +182,6 @@ const allCourses: CourseItem[] = [
       "🎓 Certificación garantizada: metodología con alta tasa de éxito",
     ],
     src: "/images/jlpt-n4.webp",
-    dataAos: "fade-right",
-    dataAosDuration: "1200",
     to: "https://cursos.japonizandoamerica.com/course/view.php?id=10",
   },
   {
@@ -207,8 +195,6 @@ const allCourses: CourseItem[] = [
       "✈️ Confianza viajera: muévete por Japón como un experto",
     ],
     src: "/images/japones-para-viajeros.webp",
-    dataAos: "fade-left",
-    dataAosDuration: "1400",
     to: "https://cursos.japonizandoamerica.com/course/view.php?id=6",
   },
   {
@@ -222,8 +208,6 @@ const allCourses: CourseItem[] = [
       "👤 Cuerpo, emociones y sociedad: partes del cuerpo, posturas, emociones, voz, comunidades y vínculos familiares",
     ],
     src: "/images/curso-kanji.webp",
-    dataAos: "fade-right",
-    dataAosDuration: "1000",
     to: "https://cursos.japonizandoamerica.com/course/view.php?id=8",
   },
   {
@@ -237,8 +221,6 @@ const allCourses: CourseItem[] = [
       "🔄 Feedback inmediato: corrección y mejora en tiempo real",
     ],
     src: "/images/taller-de-conversacion.webp",
-    dataAos: "fade-left",
-    dataAosDuration: "1200",
     to: "https://cursos.japonizandoamerica.com/course/view.php?id=4",
   },
   {
@@ -252,8 +234,6 @@ const allCourses: CourseItem[] = [
       "🎬 Práctica activa: ver anime sin subtítulos, analizar escenas y recrear diálogos",
     ],
     src: "/images/taller-anime.webp",
-    dataAos: "fade-right",
-    dataAosDuration: "1400",
     to: "https://cursos.japonizandoamerica.com/course/view.php?id=5",
   },
   {
@@ -267,8 +247,6 @@ const allCourses: CourseItem[] = [
       "🎵 Música tradicional: aprende canciones folclóricas de Okinawa",
     ],
     src: "/images/curso-okinawense.webp",
-    dataAos: "fade-left",
-    dataAosDuration: "1000",
     to: "https://cursos.japonizandoamerica.com/course/view.php?id=7",
   },
   {
@@ -282,8 +260,6 @@ const allCourses: CourseItem[] = [
       "🎯 Fundamentos culturales: etiqueta y cortesía japonesa",
     ],
     src: "/images/mini-curso-japones.webp",
-    dataAos: "fade-right",
-    dataAosDuration: "1200",
     to: "https://cursos.japonizandoamerica.com/course/view.php?id=16",
   },
 ];
@@ -296,16 +272,30 @@ const {
   goToPage,
 } = usePagination(allCourses, 2);
 
-// Animation on mount
-onMounted(() => {
-  // Reinitialize AOS if needed
-  if (import.meta.client) {
-    const AOS = (window as unknown as { AOS?: { refresh(): void } }).AOS;
-    if (AOS) {
-      AOS.refresh();
+const isMobile = ref(false);
+
+watch([paginatedCourses, isMobile], () => {
+  nextTick(() => {
+    if (import.meta.client && window.AOS) {
+      window.AOS.refresh()
     }
+  })
+}, { deep: true })
+
+
+onMounted(() => {
+  if (import.meta.client) {
+    const checkMobile = () => {
+      isMobile.value = window.matchMedia('(max-width: 1024px)').matches
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
   }
-});
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', () => {})
+})
 </script>
 <style scoped>
 .halftone-bg {

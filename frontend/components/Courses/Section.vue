@@ -1,23 +1,25 @@
 <template>
   <UContainer
     id="items"
-    class="flex flex-col justify-center items-center py-16 min-h-screen mt-28"
+    class="flex flex-col justify-center items-center py-16 min-h-screen lg:mt-28"
   >
-    <div class="py-2 mb-8 w-full" data-aos="fade-up" data-aos-duration="950">
-      <div class="flex flex-col justify-start items-center w-full h-full">
-        <h2 class="text-5xl font-bold text-center w-full lg:py-4">
+    <div class="flex items-center py-2 mb-8 w-full" data-aos="fade-up" data-aos-duration="950">
+      <div class="flex flex-col justify-center items-center text-center w-full h-full mx-auto">
+        <h2 class="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold uppercase max-w-full lg:whitespace-nowrap leading-tight mb-4 lg:mb-6">
           Conóce nuestros cursos
         </h2>
       </div>
     </div>
     <div
-      class="grid lg:grid-cols-2 gap-8 w-full max-w-7xl place-items-center mx-auto"
+      class="grid lg:grid-cols-2 gap-8 w-full max-w-6xl place-content-center place-items-center mx-auto"
     >
       <CoursesCard
         v-for="item in items"
         :key="item.title"
+        data-aos="fade-up"
+        data-aos-duration="1200"
         :item="item"
-        class="h-full"
+        class="w-10/12 lg:w-auto h-full"
       />
     </div>
   </UContainer>
@@ -37,8 +39,6 @@ const items = [
       "🎬 Práctica activa: ver anime sin subtítulos, analizar escenas y recrear diálogos.",
     ],
     src: "/images/taller-anime.webp",
-    dataAos: "fade-right",
-    dataAosDuration: "1000",
     to: "https://cursos.japonizandoamerica.com/course/view.php?id=5",
   },
   {
@@ -53,8 +53,6 @@ const items = [
       "👤 Cuerpo, emociones y sociedad: Partes del cuerpo, posturas, emociones, voz, comunidades y vínculos familiares.",
     ],
     src: "/images/curso-kanji.webp",
-    dataAos: "fade-left",
-    dataAosDuration: "1000",
     to: "https://cursos.japonizandoamerica.com/course/view.php?id=8",
   },
   {
@@ -68,8 +66,6 @@ const items = [
       "Escritura práctica: ¡termina escribiendo tu nombre en hiragana como un profesional! 🎌✨",
     ],
     src: "/images/n5.webp",
-    dataAos: "fade-right",
-    dataAosDuration: "1000",
     to: "https://cursos.japonizandoamerica.com/course/view.php?id=2",
   },
   {
@@ -83,8 +79,6 @@ const items = [
       "Práctica aplicada: situaciones reales para rendir el N4 con éxito.",
     ],
     src: "/images/n4.webp",
-    dataAos: "fade-left",
-    dataAosDuration: "1000",
     to: "https://cursos.japonizandoamerica.com/course/view.php?id=3",
   },
   {
@@ -98,9 +92,22 @@ const items = [
       "Temas culturales actuales",
     ],
     src: "/images/n3.webp",
-    dataAos: "fade-right",
-    dataAosDuration: "1000",
     to: "https://cursos.japonizandoamerica.com/course/view.php?id=12",
   },
 ];
+
+const isMobile = ref(false);
+
+onMounted(() => {
+  const checkMobile = () => {
+    isMobile.value = window.innerWidth < 1024;
+  };
+  
+  checkMobile();
+  window.addEventListener('resize', checkMobile);
+  
+  onUnmounted(() => {
+    window.removeEventListener('resize', checkMobile);
+  });
+});
 </script>

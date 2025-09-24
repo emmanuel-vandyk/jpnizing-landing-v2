@@ -1,7 +1,7 @@
 <template>
   <UCard
     :class="[
-      'flex flex-col items-center h-full bg-neutral-50 p-8 rounded-md border-3 border-black hover:shadow-lg transition-all duration-300',
+      'flex flex-col items-center justify-between h-full bg-neutral-50 p-8 rounded-md border-3 border-black hover:shadow-lg transition-all duration-300 md:w-auto',
       cardClass,
     ]"
     :data-aos="dataAos"
@@ -55,7 +55,7 @@ interface Props {
 withDefaults(defineProps<Props>(), {
   iconClass: "size-8",
   buttonTextClass: "relative z-10",
-  cardClass: "",
+  cardClass: "truncate",
   dataAos: "fade-up",
   dataAosDuration: "1000",
   external: false,

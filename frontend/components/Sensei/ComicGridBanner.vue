@@ -25,7 +25,7 @@
     </div>
 
     <!-- Mobile Layout -->
-    <div class="lg:hidden bg-black p-4 rounded-lg">
+    <div class="lg:hidden p-4 bg-black">
       <div class="space-y-6">
         <div
           v-for="(sensei, idx) in senseiData"
@@ -33,13 +33,16 @@
           class="relative"
         >
           <!-- Sensei Frame -->
-          <div class="w-full h-48 sm:h-56 md:h-64 relative">
+          <div class="w-full h-56 sm:h-64 md:h-72 relative overflow-visible">
             <SenseiFrame v-bind="mobileSenseiFrameProps[idx]" />
-          </div>
 
-          <!-- Text Box -->
-          <div class="mt-3 flex justify-center">
-            <SenseiTextBox :item="sensei" class="relative z-10" />
+            <SenseiTextBox
+              :item="sensei"
+              :class="[
+                'absolute z-30',
+                mobileTextBoxClasses[idx],
+              ]"
+            />
           </div>
         </div>
       </div>
@@ -72,6 +75,12 @@ const textBoxClasses = [
   "justify-self-center -top-3 left-0 right-0",
   "justify-self-end -bottom-5 -right-6",
 ];
+
+const mobileTextBoxClasses = [
+  "justify-self-start -bottom-2 left-4",
+  "justify-self-center -top-3 left-0 -right-60",
+  "justify-self-end -top-5 left-3",
+]
 
 const imageSources = [
   "/images/anto.png",

@@ -5,7 +5,7 @@
     </div>
     <div class="bg-center bg-cover h-full w-full justify-center">
       <div
-        class="relative bg-brand-background halftone-bg bg-contain bg-repeat-round min-h-screen bg-center mask-t-from-95% mask-b-from-98% z-20"
+        class="relative bg-brand-background halftone-bg bg-contain bg-repeat-round min-h-screen bg-center mask-t-from-99% lg:mask-t-from-97% mask-b-from-98% z-20"
       >
         <div class="flex flex-col">
           <!-- Talleres Section -->
